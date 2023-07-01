@@ -1,0 +1,1183 @@
+fileFormatVersion: 2
+guid: 33d24f3cc94dd0c4fb241783a952b5b7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 84
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29df93386b79cd41ab7661916c995a0
+      internalID: -275758793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 700
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65622495f2a636e41b815bc9b639a0a5
+      internalID: 695387767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_2
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 700
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a4a584d95e94049b764f6a6186edfe
+      internalID: -536064156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_3
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 700
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413a3a01eb4445d40864dcd85bca9c1a
+      internalID: -1194897409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_4
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 700
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10a14ebd1e44d540bcf9a0414ebff85
+      internalID: 497449487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_5
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 700
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a621dd7ef23ec904fb7a79996b9daef8
+      internalID: -1818747032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e56a28aa26f8164ab1f44c751750151
+      internalID: 1621125283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 600
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e679fc617335aad47879ecdfbf72f251
+      internalID: 267548377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_8
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 600
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e57df907cd43aa439c9c6df70a52d6d
+      internalID: 1137395461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_9
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 600
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707e20480affbc44090fb99ea84c9b00
+      internalID: -182399895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_10
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 600
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac501b686864b24e9d705c70fab7231
+      internalID: 13316308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_11
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 600
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0709e20850b2544990e46dddd4ba819
+      internalID: -1298979372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c000ef28103ab4a9d2ab42bc5dcac3
+      internalID: 285634589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 500
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f8ac5db64b274478cbe9ebae0aec0d
+      internalID: -841175465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_14
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 500
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f20c3a2a878404a95760676efa361d
+      internalID: -636269231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_15
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 500
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04c1994273407d44824438706367ce1
+      internalID: -233186727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_16
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 500
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f45cae6101429a4bb59cb38d5ad24a0
+      internalID: 537358614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_17
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 500
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4a8a9c35f78bb46b771b2b8d7527c4
+      internalID: -918532720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028a5d403a5a0d043b379029fda815a4
+      internalID: 1509182683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_19
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 400
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a36b58da9925347afe06b0cf633c39
+      internalID: 198389822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_20
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 400
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c292bc58d9437764b8e029d8e79e2592
+      internalID: -1519992944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_21
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 400
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65cdb5ea062bcf348ace6ca826dafaef
+      internalID: 565438036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_22
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 400
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e903a58fa88f414287dc347e2af1944
+      internalID: 1255599114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_23
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 400
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bced905ecdb01f43bdd74d77e63da32
+      internalID: -1157520851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078666feb6b57c049ad54357aa6343a5
+      internalID: 1370423572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_25
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 300
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5ac1c774283f194b8670f782032c0cc
+      internalID: -877500058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_26
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 300
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3c92508193a7b4882add23b1a94b52
+      internalID: 87932545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_27
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 300
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5326fa1b39c57de4c9ea4728b1badeb8
+      internalID: -1809381003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_28
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 300
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffbdc7c27aef49479127f9fc71e13b2
+      internalID: -1630227597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_29
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 300
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132791616a863b34b8dae368748d44d1
+      internalID: 206597315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bb103f6a0a64744b9f141ebf8e684e
+      internalID: -1582629127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_31
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 200
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63a6c471d6399845a1663ca43c46eb4
+      internalID: 1339325630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_32
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 200
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f391b4d0c6232458c63e5a62ecc342
+      internalID: -805177522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_33
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 200
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a50799ba143a394eaf19b2216ddad4c
+      internalID: 2108387989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_34
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 200
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30887646232f33f42aa4479b6c431c02
+      internalID: 86746193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_35
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 200
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76639447e8ea13e40bcf0a6680fa405c
+      internalID: -896748027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174ed7afa1f73a64684843a46debafee
+      internalID: -2020582769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_37
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 100
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1401770f42a08364b9a8fea36f1d5b7a
+      internalID: -487140992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_38
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 100
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca05e2dacea90a488ed2ad2ca06b35a
+      internalID: 548275253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_39
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 100
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6712b2cbe0ef0d4c8d37d8a6dcdda9d
+      internalID: 1128164520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_40
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 100
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32318b7b85669c34ba901647ce750950
+      internalID: 2062142644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_41
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 100
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d63da323bec9a42b4c6590b112bc4b
+      internalID: 12501854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fb2ff97e7275a43ac5df2653a3017a
+      internalID: -2064929820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_43
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 606ce949ed08ef748a624950dac5184d
+      internalID: 1068425269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_44
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1afb74e7669e94fac4bcf0785ab317
+      internalID: 1744777251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_45
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1cee1fc6b66b545b188e4056f13a25
+      internalID: 417467127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_46
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69d36e14ff05624caf62874fe4ecbb7
+      internalID: -1086204315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dominoes_Isometric_Left-168x100_47
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 168
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9ea49247240194897485b787ea93ab
+      internalID: 97471888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Dominoes_Isometric_Left-168x100_0: -275758793
+      Dominoes_Isometric_Left-168x100_1: 695387767
+      Dominoes_Isometric_Left-168x100_10: 13316308
+      Dominoes_Isometric_Left-168x100_11: -1298979372
+      Dominoes_Isometric_Left-168x100_12: 285634589
+      Dominoes_Isometric_Left-168x100_13: -841175465
+      Dominoes_Isometric_Left-168x100_14: -636269231
+      Dominoes_Isometric_Left-168x100_15: -233186727
+      Dominoes_Isometric_Left-168x100_16: 537358614
+      Dominoes_Isometric_Left-168x100_17: -918532720
+      Dominoes_Isometric_Left-168x100_18: 1509182683
+      Dominoes_Isometric_Left-168x100_19: 198389822
+      Dominoes_Isometric_Left-168x100_2: -536064156
+      Dominoes_Isometric_Left-168x100_20: -1519992944
+      Dominoes_Isometric_Left-168x100_21: 565438036
+      Dominoes_Isometric_Left-168x100_22: 1255599114
+      Dominoes_Isometric_Left-168x100_23: -1157520851
+      Dominoes_Isometric_Left-168x100_24: 1370423572
+      Dominoes_Isometric_Left-168x100_25: -877500058
+      Dominoes_Isometric_Left-168x100_26: 87932545
+      Dominoes_Isometric_Left-168x100_27: -1809381003
+      Dominoes_Isometric_Left-168x100_28: -1630227597
+      Dominoes_Isometric_Left-168x100_29: 206597315
+      Dominoes_Isometric_Left-168x100_3: -1194897409
+      Dominoes_Isometric_Left-168x100_30: -1582629127
+      Dominoes_Isometric_Left-168x100_31: 1339325630
+      Dominoes_Isometric_Left-168x100_32: -805177522
+      Dominoes_Isometric_Left-168x100_33: 2108387989
+      Dominoes_Isometric_Left-168x100_34: 86746193
+      Dominoes_Isometric_Left-168x100_35: -896748027
+      Dominoes_Isometric_Left-168x100_36: -2020582769
+      Dominoes_Isometric_Left-168x100_37: -487140992
+      Dominoes_Isometric_Left-168x100_38: 548275253
+      Dominoes_Isometric_Left-168x100_39: 1128164520
+      Dominoes_Isometric_Left-168x100_4: 497449487
+      Dominoes_Isometric_Left-168x100_40: 2062142644
+      Dominoes_Isometric_Left-168x100_41: 12501854
+      Dominoes_Isometric_Left-168x100_42: -2064929820
+      Dominoes_Isometric_Left-168x100_43: 1068425269
+      Dominoes_Isometric_Left-168x100_44: 1744777251
+      Dominoes_Isometric_Left-168x100_45: 417467127
+      Dominoes_Isometric_Left-168x100_46: -1086204315
+      Dominoes_Isometric_Left-168x100_47: 97471888
+      Dominoes_Isometric_Left-168x100_5: -1818747032
+      Dominoes_Isometric_Left-168x100_6: 1621125283
+      Dominoes_Isometric_Left-168x100_7: 267548377
+      Dominoes_Isometric_Left-168x100_8: 1137395461
+      Dominoes_Isometric_Left-168x100_9: -182399895
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
