@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dominoes_Isometric_Blank-168x100_0
+      name: Domino_ISO_48
       rect:
         serializedVersion: 2
         x: 0
@@ -118,7 +118,7 @@ TextureImporter:
         width: 168
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dominoes_Isometric_Blank-168x100_1
+      name: Domino_ISO_ALT_48
       rect:
         serializedVersion: 2
         x: 168
@@ -139,7 +139,7 @@ TextureImporter:
         width: 168
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dominoes_Isometric_Blank-168x100_0: 482170808
-      Dominoes_Isometric_Blank-168x100_1: 966522772
+      Domino_ISO_48: 482170808
+      Domino_ISO_ALT_48: 966522772
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
