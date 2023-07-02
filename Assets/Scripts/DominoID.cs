@@ -34,6 +34,17 @@ public class DominoID
             Debug.Log("Invalid Domino ID. ERROR: " + e.Message);
         }
     }
+    public DominoID (int id)
+    {
+        try 
+        {
+            this.ConvertInt = id;
+        }
+        catch (System.Exception e) 
+        {
+            Debug.Log("Invalid Domino ID. ERROR: " + e.Message);
+        }
+    }
 
     // Getters and Setters
     public int[] Value 
