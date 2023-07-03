@@ -49,5 +49,8 @@ public abstract class DominoPiece : MonoBehaviour
     }
 
     //to-do Update self sprite automatically
-    
+    public abstract bool appendPiece(DominoPiece pieceToAppend);  
+    public abstract bool stackPiece(DominoPiece pieceToStack);
+    protected abstract bool connectToBottom(DominoPiece pieceToConnect);
+    protected abstract bool connectToTop(DominoPiece pieceToConnect);
 }
