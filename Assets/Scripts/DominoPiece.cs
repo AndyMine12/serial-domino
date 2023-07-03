@@ -86,9 +86,7 @@ public abstract class DominoPiece : MonoBehaviour
         this.StartCoroutine(this.updateSprite());
     }
     public void rotate(){
-        this._id = new DominoID(new int[2] {this.TopValue, this.BottomValue});
-        this.StopCoroutine(this.updateSprite());
-        this.StartCoroutine(this.updateSprite());
+        this.changeId(new DominoID(new int[2] {this.TopValue, this.BottomValue}));
     }
     public void changeId(DominoID newId){
         this._id = newId;
