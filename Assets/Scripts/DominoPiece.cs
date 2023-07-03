@@ -20,7 +20,9 @@ public abstract class DominoPiece : MonoBehaviour
 
     protected virtual void Start() {
         this._renderer = this.GetComponent<SpriteRenderer>();
+        StartCoroutine (this.updateSprite());
     }
+
     //Get self sprite name from current ID, rotation, and setting
     public virtual string getSpriteName()
     {
@@ -48,9 +50,56 @@ public abstract class DominoPiece : MonoBehaviour
         return spriteName;
     }
 
-    //to-do Update self sprite automatically
     public abstract bool appendPiece(DominoPiece pieceToAppend);  
     public abstract bool stackPiece(DominoPiece pieceToStack);
     protected abstract bool connectToBottom(DominoPiece pieceToConnect);
     protected abstract bool connectToTop(DominoPiece pieceToConnect);
+    
+    //to-do Update self sprite automatically
+    //Async-load the new sprite requested
+    public IEnumerator updateSprite()
+    {
+        ResourceRequest loader = Resources.LoadAsync("Sprites/Domino/" + this.getSpriteName(), typeof(UnityEngine.Sprite));
+        do
+            yield return loader;
+        while (!loader.isDone);
+
+        Object loadedAsset = loader.asset;
+        if (loadedAsset.GetType() == typeof(UnityEngine.Sprite))
+        {
+            this._renderer.sprite = loadedAsset as UnityEngine.Sprite;
+        }
+        else
+        {
+            throw new System.ArgumentNullException(nameof(loader), "Cannot find the sprite in the path specified");
+        }
+    }
+
+    //View- and Piece-transformations
+    public void toggleAlternate(){
+        this.isAlternate = !this.isAlternate;
+        this.StopCoroutine(this.updateSprite());
+        this.StartCoroutine(this.updateSprite());
+    }
+    public void flip(){
+        this.isVisible = !this.isVisible;
+        this.StopCoroutine(this.updateSprite());
+        this.StartCoroutine(this.updateSprite());
+    }
+    public void toggleView(){
+        this.isTopDown = !this.isTopDown;
+        this.StopCoroutine(this.updateSprite());
+        this.StartCoroutine(this.updateSprite());
+    }
+    public void rotate(){
+        this._id = new DominoID(new int[2] {this.TopValue, this.BottomValue});
+        this.StopCoroutine(this.updateSprite());
+        this.StartCoroutine(this.updateSprite());
+    }
+    public void changeId(DominoID newId){
+        this._id = newId;
+        this.StopCoroutine(this.updateSprite());
+        this.StartCoroutine(this.updateSprite());
+    }
+
 }

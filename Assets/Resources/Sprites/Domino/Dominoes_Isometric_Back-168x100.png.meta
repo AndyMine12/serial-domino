@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2a5985d332878f24db736be59c8467ce
+guid: 8df6a5814ac48e84a915deb8306649a9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 62
+  spritePixelsToUnits: 84
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Domino_TD_ALT_BACK
+      name: Domino_ISO_BACK
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 140
+        width: 168
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3288bf11777d8174a9aef0251d91749d
-      internalID: 18407987
+      spriteID: e1d8dce657cd16b4ab4342520a4c607b
+      internalID: 1717077161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Domino_TD_BACK
+      name: Domino_ISO_ALT_BACK
       rect:
         serializedVersion: 2
-        x: 128
+        x: 168
         y: 0
-        width: 128
-        height: 140
+        width: 168
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6bfd5091df96ff4fbacb37f33e7ba53
-      internalID: 616055373
+      spriteID: 1d17f9b3a038be841afcb4861291ed57
+      internalID: -253149021
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Domino_TD_ALT_BACK: 18407987
-      Domino_TD_BACK: 616055373
+      Domino_ISO_ALT_BACK: -253149021
+      Domino_ISO_BACK: 1717077161
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

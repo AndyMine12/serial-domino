@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a2c98693db6ee644d8af5edcd47ed5eb
+guid: 2ac2edf2a2aaba84f8a2109d62776deb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 84
+  spritePixelsToUnits: 62
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,1021 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Domino_ISO_1
+      name: Domino_TD_ALT_0
       rect:
         serializedVersion: 2
         x: 0
         y: 700
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39be7873e6cc1874385d56b2271779df
-      internalID: -1607970692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_9
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 700
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60ae277f2120ae94ca1292453759226b
-      internalID: -1814540429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_17
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 700
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5e7f6c028f67b84d9b9f7bb642b37cb
-      internalID: 1139566867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_25
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 700
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77eabeea8f247ec4189590b6e1a7fce9
-      internalID: 521751744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_33
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 700
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d1532d46f315ff458039eba42023111
-      internalID: 220752651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_41
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 700
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e82d89a3163a4645b1165fb2395ec1e
-      internalID: -1237700785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 600
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc18d37b025b4804a8959da5dfdf8d03
-      internalID: -78068402
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_8
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 600
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b857199c2533ed3488abe226cd7fd92a
-      internalID: -1737008863
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_16
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 600
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9dd6e4f135611ce47bfd0834d2737228
-      internalID: 977651960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_24
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 600
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9765b22f46f6841419ffc8a69a71def1
-      internalID: 229319813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_32
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 600
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6083925dee573e549b2d1f398d886159
-      internalID: -2024322147
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_40
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 600
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a286634a668eecf4298e39eb2c97f44b
-      internalID: 563016556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 500
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbd4908f098a11f42b53d645d3ce8d3e
-      internalID: -660243488
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_10
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 500
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04ae0cd363fedf84fbeecd1149800aad
-      internalID: -626218407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_18
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 500
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 099e856bf46d7bb42917856bca58de55
-      internalID: 825418401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_26
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 500
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e64713968b6e7374987339fc2db32006
-      internalID: -454522367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_34
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 500
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e133890609b220447b49f55e45e42e22
-      internalID: -1022686143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_42
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 500
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d29308a249648e2479324cb6e82063b2
-      internalID: -598445480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 400
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: deb037c66db78544f8588de4a3afffd4
-      internalID: -100562922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_11
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 400
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4cc83576c0a1a4c4e8f8dd0c89075870
-      internalID: 617413766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_19
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 400
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e028b57a58f1db48bbfb7fae63fe1a1
-      internalID: 1435569251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_27
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 400
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a28d74e50507224298798e263a4c79d
-      internalID: 1428276382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_35
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 400
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70d0810549fa4984faebce61dadba6a7
-      internalID: 1257734545
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_43
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 400
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8736cf4067783744490e1ae6e1e76694
-      internalID: 105841924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 300
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c92ac1144d7ec546a7d4db2af3d8354
-      internalID: 1177554920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_12
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 300
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 565f354aad80d4f41b5897320a26ad37
-      internalID: -369351402
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_20
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 300
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cad669a333c4dcf45a262144828fd835
-      internalID: 9908230
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_28
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 300
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da2b84c78922ebb418d0cb426bbe363d
-      internalID: -893650598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_36
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 300
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46e52bed2b4a3e944a7ab35c3d091af3
-      internalID: -111080815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_44
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 300
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b77b51776bd3f949aee6a8ed47e04ac
-      internalID: 2040617687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 200
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f76c505dc827ff4aba0a3881f34ab77
-      internalID: -1371942087
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_13
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 200
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2be1d7283cf63b54b8ccf1b5362cda78
-      internalID: -1236978107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_21
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 200
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f53e525523aea8247a987f9e200dcbdb
-      internalID: -310842304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_29
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 200
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 950263d241905d34e9e710448fafe2bd
-      internalID: -874398817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_37
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 200
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54e63f7ea708d7c48bc2463f637e6878
-      internalID: 2017436397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_45
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 200
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49563dac5b6f94041b78254a9889de33
-      internalID: -297182891
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 100
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b1b1b4c9e830e149a3910389223e2ec
-      internalID: -194540962
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_14
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 100
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 283c782752368f84bb5e7b1cb223212b
-      internalID: 422901443
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_22
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 100
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1ef03096fa5b1e47a283f6578fa4ff6
-      internalID: 227022861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_30
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 100
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edd4da53c4b89124d9b629b1930d6d28
-      internalID: 74347050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_38
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 100
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc2bcf79dca68804994e671b20042878
-      internalID: -704273371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_46
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 100
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9a18174790897749aa94cb69f45f901
-      internalID: 1332740583
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_7
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db590fa44c8fc144d9381956f8b08f4d
-      internalID: 912503131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_15
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 0
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2be4e8c477fbd84f95764c5bfb845a0
-      internalID: -1160841290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_23
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 0
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c0200d243b63a848a6342ef3e4b53f6
-      internalID: 1275069990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_31
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 0
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5abc7115fcca0741b227bafb3951de4
-      internalID: 182381753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_39
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 0
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6faca969465f624d98ba60a5f6d537f
-      internalID: -2050761089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISO_47
-      rect:
-        serializedVersion: 2
-        x: 840
-        y: 0
-        width: 168
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f67b3f96c6319b043a466b8d1e944248
-      internalID: -1359062463
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Domino_ISObase_0
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 110
-        width: 36
-        height: 313
+        width: 128
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1132,8 +124,995 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d61709faceece264cb74c4609cd98665
-      internalID: 696103600
+      spriteID: 5f92a9f8170c756449786d439d1332cc
+      internalID: -2054025763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 700
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941943a56198d0245bab0502bd92fe45
+      internalID: 2003586961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 700
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e2cc1ab80e858409fa737f8d435bd0
+      internalID: 266372998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 700
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e455626b99af6c429821d9454811a7b
+      internalID: 339786584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 700
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be6c7d43ca24a348853839418676243
+      internalID: -1824732654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 700
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c19f5f899f7c44eb2db8b077559517
+      internalID: -1449879962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 700
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8efa62d5a27ee840aca86f100c06f10
+      internalID: 294231450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 700
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0764888c194f8c54681afc79554663a7
+      internalID: -1519759238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a93b0f1b806ed43bf05bca5886e33b
+      internalID: -335561954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 560
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9f1c20710282e4c8624c0681cc74f1
+      internalID: -481643970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 560
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cb9a47ed6094d4e8d14266feb6cdb2
+      internalID: 1638542258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 560
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efe98fcd5a925b4489d7e7d30668126
+      internalID: -522747024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 560
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e24b23ee135724ab1944fb18b62f5b
+      internalID: -1867278950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_13
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 560
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c34d24d62ae3b4eaf76ab0c5793d4a
+      internalID: -1522783515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 560
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6999bcbfd4fa6e6488f6fcfc35004484
+      internalID: -779133344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_15
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 560
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6580bf4e322b3644987f7bcedcbacd96
+      internalID: -892131107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ff3b133459be64ea0d5ac3ae18e060
+      internalID: -1050142375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 420
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca05cc6e07467dc4a902ce7fb633aadf
+      internalID: -1111294363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 420
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39d6fc33e41d3944864d137c16981be
+      internalID: 6747032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 420
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba47073421aca042a1491224ebbe238
+      internalID: 267063252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 420
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92428eba58a2b449ad0156802363bee
+      internalID: -442573208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 420
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df583ea07065ba458d0744093528f9a
+      internalID: -1049414479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_22
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 420
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c7465f21c958e41b5619a7c6200686
+      internalID: 972614409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_23
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 420
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412f49f4831e09946b9c9fec8d4d5235
+      internalID: 394061994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa2545a6091f6841936df48bf6ecef7
+      internalID: -37556395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 280
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2629a748bd41cad4fbfe5b68a592a55a
+      internalID: -261507024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 280
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b40da15bae87ce4280559a1698a4bc3
+      internalID: 1994245126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 280
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c56c66b0aa7dc4fb40839a9bc316a2
+      internalID: 1949372508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 280
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44af0c05d893c8243be9eefb8a2583de
+      internalID: -925601738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 280
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d2d4a8363f65349ac90185724c028d
+      internalID: -1525879344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_30
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 280
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51097e365d85b844296934183f391856
+      internalID: -966914979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_31
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 280
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6d34aaaa6b5c34992464161001d68d
+      internalID: 1499114571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b86d2d93a1f5647adeb20e1fdb73ed
+      internalID: 925471493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_33
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 140
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d2e273d1422e74eabd892909253c0e
+      internalID: -780577345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 140
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0f77d7607f29548b8d23e97556b7c6
+      internalID: 1734936599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_35
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 140
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8448903c385da4e8b77b6ccd227d47
+      internalID: -1483581477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_36
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 140
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9581aa1031d5c4242a0695c979242317
+      internalID: 155530779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_37
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 140
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb7b567474523e438fb28ac20d61246
+      internalID: -1324788968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_38
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 140
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e401c11f9ef8be246944b1a95e6255d4
+      internalID: -491866204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_39
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 140
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6f40412c7323e4088928e5f9d34279
+      internalID: -1990370069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc3712ab5b4dba4a905ec178d03c917
+      internalID: 209117744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa5fb86c0a3a57498b60df807da0119
+      internalID: 1551846098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_42
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fecba3c28bff434d9b72367e9c07b0b
+      internalID: 1355645443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_43
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b34cd32fbf48c44aa1a9730777954c
+      internalID: -1944464029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3093920953ae5dd45ab6f06b3aa0dfce
+      internalID: -2009779808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_45
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811aa17761a946a418a28251116e3d0e
+      internalID: 1354180730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_46
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6df1cab264db2a4eb00bcd04aa92a19
+      internalID: 2059615801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Domino_TD_ALT_47
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c109550176c1144a6477cb0a7dab5d
+      internalID: -624129659
       vertices: []
       indices: 
       edges: []
@@ -1149,55 +1128,54 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Domino_ISO_0: -78068402
-      Domino_ISO_1: -1607970692
-      Domino_ISO_10: -626218407
-      Domino_ISO_11: 617413766
-      Domino_ISO_12: -369351402
-      Domino_ISO_13: -1236978107
-      Domino_ISO_14: 422901443
-      Domino_ISO_15: -1160841290
-      Domino_ISO_16: 977651960
-      Domino_ISO_17: 1139566867
-      Domino_ISO_18: 825418401
-      Domino_ISO_19: 1435569251
-      Domino_ISO_2: -660243488
-      Domino_ISO_20: 9908230
-      Domino_ISO_21: -310842304
-      Domino_ISO_22: 227022861
-      Domino_ISO_23: 1275069990
-      Domino_ISO_24: 229319813
-      Domino_ISO_25: 521751744
-      Domino_ISO_26: -454522367
-      Domino_ISO_27: 1428276382
-      Domino_ISO_28: -893650598
-      Domino_ISO_29: -874398817
-      Domino_ISO_3: -100562922
-      Domino_ISO_30: 74347050
-      Domino_ISO_31: 182381753
-      Domino_ISO_32: -2024322147
-      Domino_ISO_33: 220752651
-      Domino_ISO_34: -1022686143
-      Domino_ISO_35: 1257734545
-      Domino_ISO_36: -111080815
-      Domino_ISO_37: 2017436397
-      Domino_ISO_38: -704273371
-      Domino_ISO_39: -2050761089
-      Domino_ISO_4: 1177554920
-      Domino_ISO_40: 563016556
-      Domino_ISO_41: -1237700785
-      Domino_ISO_42: -598445480
-      Domino_ISO_43: 105841924
-      Domino_ISO_44: 2040617687
-      Domino_ISO_45: -297182891
-      Domino_ISO_46: 1332740583
-      Domino_ISO_47: -1359062463
-      Domino_ISO_5: -1371942087
-      Domino_ISO_6: -194540962
-      Domino_ISO_7: 912503131
-      Domino_ISO_8: -1737008863
-      Domino_ISO_9: -1814540429
-      Domino_ISObase_0: 696103600
+      Domino_TD_ALT_0: -2054025763
+      Domino_TD_ALT_1: 2003586961
+      Domino_TD_ALT_10: 1638542258
+      Domino_TD_ALT_11: -522747024
+      Domino_TD_ALT_12: -1867278950
+      Domino_TD_ALT_13: -1522783515
+      Domino_TD_ALT_14: -779133344
+      Domino_TD_ALT_15: -892131107
+      Domino_TD_ALT_16: -1050142375
+      Domino_TD_ALT_17: -1111294363
+      Domino_TD_ALT_18: 6747032
+      Domino_TD_ALT_19: 267063252
+      Domino_TD_ALT_2: 266372998
+      Domino_TD_ALT_20: -442573208
+      Domino_TD_ALT_21: -1049414479
+      Domino_TD_ALT_22: 972614409
+      Domino_TD_ALT_23: 394061994
+      Domino_TD_ALT_24: -37556395
+      Domino_TD_ALT_25: -261507024
+      Domino_TD_ALT_26: 1994245126
+      Domino_TD_ALT_27: 1949372508
+      Domino_TD_ALT_28: -925601738
+      Domino_TD_ALT_29: -1525879344
+      Domino_TD_ALT_3: 339786584
+      Domino_TD_ALT_30: -966914979
+      Domino_TD_ALT_31: 1499114571
+      Domino_TD_ALT_32: 925471493
+      Domino_TD_ALT_33: -780577345
+      Domino_TD_ALT_34: 1734936599
+      Domino_TD_ALT_35: -1483581477
+      Domino_TD_ALT_36: 155530779
+      Domino_TD_ALT_37: -1324788968
+      Domino_TD_ALT_38: -491866204
+      Domino_TD_ALT_39: -1990370069
+      Domino_TD_ALT_4: -1824732654
+      Domino_TD_ALT_40: 209117744
+      Domino_TD_ALT_41: 1551846098
+      Domino_TD_ALT_42: 1355645443
+      Domino_TD_ALT_43: -1944464029
+      Domino_TD_ALT_44: -2009779808
+      Domino_TD_ALT_45: 1354180730
+      Domino_TD_ALT_46: 2059615801
+      Domino_TD_ALT_47: -624129659
+      Domino_TD_ALT_5: -1449879962
+      Domino_TD_ALT_6: 294231450
+      Domino_TD_ALT_7: -1519759238
+      Domino_TD_ALT_8: -335561954
+      Domino_TD_ALT_9: -481643970
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
