@@ -61,6 +61,12 @@ public abstract class DominoPiece : MonoBehaviour
         return spriteName;
     }
 
+    public abstract bool appendPiece(DominoPiece pieceToAppend);  
+    public abstract bool stackPiece(DominoPiece pieceToStack);
+    protected abstract bool connectToBottom(DominoPiece pieceToConnect);
+    protected abstract bool connectToTop(DominoPiece pieceToConnect);
+    
+    //to-do Update self sprite automatically
     //Async-load the new sprite requested
     public IEnumerator updateSprite()
     {
