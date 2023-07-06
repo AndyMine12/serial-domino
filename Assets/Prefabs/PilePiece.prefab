@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8060360804213432948}
   - component: {fileID: 4552306296943575080}
   - component: {fileID: 3696271580282440253}
+  - component: {fileID: 7663874960662226238}
   m_Layer: 0
   m_Name: PilePiece
   m_TagString: Untagged
@@ -147,3 +148,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9518418, y: 1.121074}
   m_EdgeRadius: 0
+--- !u!114 &7663874960662226238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601883513190834726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b100bd9af2d2741a121e6a7e625809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onMouseEnterColor: {r: 0.9339623, g: 0.9247869, b: 0.3054467, a: 1}
+  onMouseClickColor: {r: 0.63012385, g: 1, b: 0.19496846, a: 1}
+  onMouseDownColor: {r: 0.64779866, g: 0.895871, b: 1, a: 1}
+  standbyColor: {r: 1, g: 1, b: 1, a: 1}
+  onLockColor: {r: 80, g: 80, b: 80, a: 1}
+  domino: {fileID: 4552306296943575080}

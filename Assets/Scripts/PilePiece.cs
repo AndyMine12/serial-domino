@@ -13,7 +13,8 @@ public class PilePiece : DominoPiece
     }
 
     private void OnMouseUpAsButton() {
-        this._controller.SendHand(this._id);
+        if(this.Interact)
+            this._controller.SendHand(this._id);
     }
 
     protected override bool connectToBottom(DominoPiece pieceToConnect)

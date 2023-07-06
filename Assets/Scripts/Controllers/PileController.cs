@@ -34,6 +34,7 @@ public class PileController : Controller
             this.InstantiatePiece (new DominoID(new int[2] {2, 0}));
             this.InstantiatePiece (new DominoID(new int[2] {4, 3}));
             this.InstantiatePiece (new DominoID(new int[2] {6, 6}));
+            this.ActivatePile();
     }
 
     //Create a new piece within the pile's spawn zone
@@ -43,7 +44,12 @@ public class PileController : Controller
         if(newPiece.isVisible){newPiece.flip();}
         newPiece.changeId(id);
         float seed = Random.Range(-1f, 1f);
-        Vector3 spawnPos = this._spawnZone.bounds.center + seed * (this._spawnZone.bounds.extents - newPiece.PieceSize);
+        Vector3 modifier = this._spawnZone.bounds.extents - newPiece.PieceSize;
+        modifier.x *= seed;
+        seed = Random.Range(-1f,1f);
+        modifier.y *= seed;
+        modifier.z = 0f;
+        Vector3 spawnPos = this._spawnZone.bounds.center + modifier;
         newPiece.updatePos(spawnPos);
         newPiece._controller = this;
         this._pile.Add(newPiece);
@@ -71,6 +77,21 @@ public class PileController : Controller
         return found;
     }
 
+    //Set all pile pieces to be interact-able by the player
+    public void ActivatePile(){
+        foreach(PilePiece objective in this._pile)
+        {
+            objective.Interact = true;
+        }
+    }
+    //Set all pile pieces to be non interact-able by the player
+    public void LockPile(){
+        foreach(PilePiece objective in this._pile)
+        {
+            objective.Interact = false;
+        }
+    }
+
     //Send a specific piece to the player hand
     public void SendHand(DominoID id)
     {
@@ -87,7 +108,7 @@ public class PileController : Controller
 
             playerHand.AddPiece(id);
             //to-do Must also send piece to network
-            //to-do Must also set game to 'wait'
+            //to-do Must also set game to 'wait' && lock pile
             this.DeletePiece(id);
         }
     }
