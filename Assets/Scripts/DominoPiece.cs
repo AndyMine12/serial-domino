@@ -61,12 +61,15 @@ public abstract class DominoPiece : MonoBehaviour
         return spriteName;
     }
 
+    //Add piece to the last position of the linked list
     public abstract bool appendPiece(DominoPiece pieceToAppend);  
+    //Add piece to the first position of the linked list
     public abstract bool stackPiece(DominoPiece pieceToStack);
+    //Connect a new piece, next to this one, through this one's bottom
     protected abstract bool connectToBottom(DominoPiece pieceToConnect);
+    //Connect a new piece, before this one, through this one's top
     protected abstract bool connectToTop(DominoPiece pieceToConnect);
     
-    //to-do Update self sprite automatically
     //Async-load the new sprite requested
     public IEnumerator updateSprite()
     {
