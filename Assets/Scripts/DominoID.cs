@@ -125,6 +125,7 @@ public class DominoID
     //Converts this ID to a String
     public override string ToString()
     {
-        return this._id[0].ToString() + this._id[1].ToString(); 
+        return "{" + this._id[0].ToString() + "|" + this._id[1].ToString() + "}"; 
     }
+
 }
