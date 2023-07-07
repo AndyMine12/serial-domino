@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Controller to handle the 'steal' pile for 2P games
 public class PileController : Controller
 {
     public PilePiece basePiece;
@@ -41,8 +42,8 @@ public class PileController : Controller
     public void InstantiatePiece (DominoID id) 
     {
         PilePiece newPiece = Instantiate(basePiece,this._spawnZone.bounds.center,Quaternion.identity);
-        if(newPiece.isVisible){newPiece.flip();}
         newPiece.changeId(id);
+        if(newPiece.isVisible){newPiece.flip();}
         float seed = Random.Range(-1f, 1f);
         Vector3 modifier = this._spawnZone.bounds.extents - newPiece.PieceSize;
         modifier.x *= seed;
@@ -61,7 +62,7 @@ public class PileController : Controller
     }
     public void DeletePiece (PilePiece piece){
         this._pile.Remove(piece);
-        Destroy(piece.gameObject);
+        Destroy(piece.gameObject, 0.1f);
     }
 
     public PilePiece GetPieceById (DominoID id) {
@@ -106,7 +107,7 @@ public class PileController : Controller
             }
             HandController playerHand = (HandController)candidate;
 
-            playerHand.AddPiece(id);
+            playerHand.AddPiece(new DominoID(id.ConvertInt));
             //to-do Must also send piece to network
             //to-do Must also set game to 'wait' && lock pile
             this.DeletePiece(id);

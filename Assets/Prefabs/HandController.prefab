@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2866024425011796197, guid: 737efc7c136bdaa479108913e4666859, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2866024425011796197, guid: 737efc7c136bdaa479108913e4666859, type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6996975678603446766, guid: 737efc7c136bdaa479108913e4666859, type: 3}
       propertyPath: m_Name
-      value: HandController Variant
+      value: HandController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -93,5 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb58ca782cc3c6940ba7664cf42ac2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
-  show: 0
+  identifier: hand
+  show: 1
+  basePiece: {fileID: 3049993128790684266, guid: 5d05ff5553b2f1b4b9589a4daafc4231, type: 3}
+  doHorizontalDisp: 1

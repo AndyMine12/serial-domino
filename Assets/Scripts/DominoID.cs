@@ -69,18 +69,18 @@ public class DominoID
         {
             if (this._id[0] == 0)
             {
-                return (8 * (this._id[1] - 1));
-            }
-            else
-            {
-                if (this._id[1] != 0)
+                if (this._id[1] == 0)
                 {
-                    return (8 * (this._id[0] - 1) + (this._id[1] + 1));
+                    return 48;  //Double-blank converts to int as 48 (topmost value)
                 }
                 else
                 {
-                    return 48; //Double-blank converts to int as 48 (topmost value)
+                    return (8 * (this._id[1] - 1));
                 }
+            }
+            else
+            {
+                return (8 * (this._id[0] - 1) + (this._id[1] + 1));
             }
         }
         set
@@ -102,13 +102,16 @@ public class DominoID
                 }
                 this.Value = new int[2] {bottomVal, topVal};
             }
-            else if (value == 48) //Is double-blank
+            else 
             {
-                this.Value = new int[2] {0,0};
-            }
-            else
-            {
-                throw new System.ArgumentOutOfRangeException(nameof(value), "Dominoes are represented by integers 0 through 48");
+                if (value == 48) //Is double-blank
+                {
+                    this.Value = new int[2] {0,0};
+                }
+                else
+                {
+                    throw new System.ArgumentOutOfRangeException(nameof(value), "Dominoes are represented by integers 0 through 48");
+                }
             }
         }
     }

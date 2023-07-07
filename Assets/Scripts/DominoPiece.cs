@@ -9,7 +9,7 @@ public abstract class DominoPiece : MonoBehaviour
     protected DominoPiece _prevPiece = null;
     protected DominoPiece _nextPiece = null;
     //Domino pieces' id represent them as a two-integer array: bottomvalue first, then topvalue
-    protected DominoID _id; 
+    protected DominoID _id;
     protected SpriteRenderer _renderer;
     public bool isAlternate = false;
     public bool isTopDown = true;
@@ -20,6 +20,10 @@ public abstract class DominoPiece : MonoBehaviour
     public int BottomValue => this._id.BottomValue;
     public DominoID Id => this._id;
     public bool Interact {get => this._canInteract; set => this._canInteract = value;}
+    public virtual bool Colorize => true;
+    public DominoPiece PrevPiece {get => this._prevPiece; set => this._prevPiece = value;}
+    public DominoPiece NextPiece {get => this._nextPiece; set => this._nextPiece = value;}
+
     public Vector3 PieceSize 
     {
         get
@@ -69,6 +73,8 @@ public abstract class DominoPiece : MonoBehaviour
     protected abstract bool connectToBottom(DominoPiece pieceToConnect);
     //Connect a new piece, before this one, through this one's top
     protected abstract bool connectToTop(DominoPiece pieceToConnect);
+    //Delete a piece from the list using their ID
+    public abstract DominoPiece deleteById(DominoID id);
     
     //Async-load the new sprite requested
     public IEnumerator updateSprite()
@@ -127,9 +133,11 @@ public abstract class DominoPiece : MonoBehaviour
         this.StartCoroutine(this.updateSprite());
     }
     //Update the piece's position
-    public void updatePos(Vector3 newPos){
-        this._renderer = this.GetComponent<SpriteRenderer>(); //Update Sprite Renderer component to avoid null references
-        this._renderer.transform.position = newPos;
+    public virtual void updatePos(Vector3 newPos){
+        this.transform.position = newPos;
     }
     
+    //Interaction-related
+    public virtual void Activate(int[] valid, bool isStrict = false){ this._canInteract = true; }
+    public virtual void Lock(){ this._canInteract = false; }
 }

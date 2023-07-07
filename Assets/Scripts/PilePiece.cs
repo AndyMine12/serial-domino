@@ -37,4 +37,17 @@ public class PilePiece : DominoPiece
         //Pile pieces do not connect to one another. Thus, always return false
         return false;
     }
+    public override DominoPiece deleteById(DominoID id)
+    {
+        //Since Pile pieces do not connect to one another, try to delete self if Id matches
+        if(this.Id.ConvertInt == id.ConvertInt)
+        {
+            Destroy(this.gameObject, 0.1f);
+            return null;
+        }
+        else
+        {
+            return this;
+        }
+    }
 }

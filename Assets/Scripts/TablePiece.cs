@@ -70,4 +70,10 @@ public class TablePiece : DominoPiece
             return false;
         }
     }
+
+    public override DominoPiece deleteById(DominoID id)
+    {
+        //to-do To do
+        return null;
+    }
 }

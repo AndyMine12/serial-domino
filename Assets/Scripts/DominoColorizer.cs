@@ -18,33 +18,36 @@ public class DominoColorizer : MonoBehaviour
         this.standbyColor = this._renderer.color;
     }
     private void Update() {
-        if (!this.domino.Interact)
+        if (this.domino.Colorize)
         {
-            this._renderer.color = this.onLockColor;
-        }
-        else 
-        {
-            if (this._renderer.color == this.onLockColor)
+            if (!this.domino.Interact)
             {
-                this._renderer.color = this.standbyColor;
+                this._renderer.color = this.onLockColor;
+            }
+            else 
+            {
+                if (this._renderer.color == this.onLockColor)
+                {
+                    this._renderer.color = this.standbyColor;
+                }
             }
         }
     }
 
     private void OnMouseDown() {
-        if(this.domino.Interact)
+        if(this.domino.Interact && this.domino.Colorize)
             this._renderer.color = this.onMouseDownColor;
     }
     private void OnMouseUpAsButton() {
-        if(this.domino.Interact)
+        if(this.domino.Interact && this.domino.Colorize)
             this._renderer.color = this.onMouseClickColor;
     }
     private void OnMouseEnter() {
-        if(this.domino.Interact)
+        if(this.domino.Interact && this.domino.Colorize)
             this._renderer.color = this.onMouseEnterColor;
     }
     private void OnMouseExit() {
-        if(this.domino.Interact)
+        if(this.domino.Interact && this.domino.Colorize)
             this._renderer.color = this.standbyColor;
     }
 }
