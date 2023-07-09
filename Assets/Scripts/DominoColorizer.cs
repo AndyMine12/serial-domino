@@ -12,6 +12,7 @@ public class DominoColorizer : MonoBehaviour
     public Color onLockColor = new Color(0.639f, 0.639f, 0.639f, 1f); //Gray-ish by default
     public DominoPiece domino;
     private SpriteRenderer _renderer;
+    private bool _isLocked = false;
 
     private void Start() { 
         this._renderer = this.GetComponent<SpriteRenderer>();
@@ -23,13 +24,15 @@ public class DominoColorizer : MonoBehaviour
             if (!this.domino.Interact)
             {
                 this._renderer.color = this.onLockColor;
+                this._isLocked = true;
             }
             else 
             {
-                if (this._renderer.color == this.onLockColor)
+                if (this._isLocked)
                 {
                     this._renderer.color = this.standbyColor;
                 }
+                this._isLocked = false;
             }
         }
     }
