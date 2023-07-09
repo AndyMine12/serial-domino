@@ -136,6 +136,12 @@ public abstract class DominoPiece : MonoBehaviour
     public virtual void updatePos(Vector3 newPos){
         this.transform.position = newPos;
     }
+    //Modify the piece's drawing order and depth
+    public virtual void setDepth(int order)
+    {
+        if (this._renderer == null) { this._renderer = this.GetComponent<SpriteRenderer>(); } //Renderer may not be null
+        this._renderer.sortingOrder = order;
+    }
     
     //Interaction-related
     public virtual void Activate(int[] valid, bool isStrict = false){ this._canInteract = true; }

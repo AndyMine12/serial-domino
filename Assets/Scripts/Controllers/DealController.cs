@@ -10,6 +10,7 @@ public class DealController : Controller
     private BoxCollider2D _spawnZone;
     private ModeController _mode;
     private List<DominoID> _selected = new List<DominoID>();
+    private int _currentDepth = 100;
 
     protected override void Start()
     {
@@ -61,6 +62,9 @@ public class DealController : Controller
         Vector3 spawnPos = this._spawnZone.bounds.center + modifier;
         newPiece.updatePos(spawnPos);
         newPiece._controller = this;
+        //Pieces that are instantiated first are 'deeper' than those instantiated later
+        newPiece.setDepth(this._currentDepth);
+        this._currentDepth -= 1; //Next piece is 'higher'
         this._spawned.Add(newPiece);
     }
 
