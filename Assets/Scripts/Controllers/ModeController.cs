@@ -6,7 +6,9 @@ public class ModeController : Controller
 {
     private int _mode = -1;
     //Modes: -1 -> Wait, 0 -> Dealer, 1 -> Standby
+    public int _players = 4;
     public int Mode => this._mode;
+    public int PlayerCount => this._players;
 
     //Mode controller must be initialized and activated before all other controllers
     protected void Awake(){

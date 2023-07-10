@@ -167,7 +167,7 @@ MonoBehaviour:
   onMouseDownColor: {r: 0.572327, g: 0.871698, b: 1, a: 1}
   standbyColor: {r: 1, g: 1, b: 1, a: 1}
   onLockColor: {r: 0.44313726, g: 0.44313726, b: 0.44313726, a: 1}
-  domino: {fileID: 3049993128790684266}
+  objective: {fileID: 3049993128790684266}
 --- !u!50 &5682024735416125102
 Rigidbody2D:
   serializedVersion: 4

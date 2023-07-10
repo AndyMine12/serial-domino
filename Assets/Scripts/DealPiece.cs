@@ -12,10 +12,6 @@ public class DealPiece : DominoPiece
     protected override void Start()
     {
         this.isVisible = false;
-        if (Random.Range(0,2) == 1) //50% chance of creating alternate piece (have more variety on pieces on table)
-        {
-            this.isAlternate = !this.isAlternate;
-        }
         base.Start();
     }
 
