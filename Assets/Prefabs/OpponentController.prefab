@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1651707845354532653
+--- !u!1001 &5347646246288537917
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2866024425011796197, guid: 737efc7c136bdaa479108913e4666859, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.26
+      value: -12.522135
       objectReference: {fileID: 0}
     - target: {fileID: 2866024425011796197, guid: 737efc7c136bdaa479108913e4666859, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.69
+      value: -0.06989688
       objectReference: {fileID: 0}
     - target: {fileID: 2866024425011796197, guid: 737efc7c136bdaa479108913e4666859, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54,19 +54,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4380218632303042512, guid: 737efc7c136bdaa479108913e4666859, type: 3}
       propertyPath: m_Color.b
-      value: 0.08627451
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4380218632303042512, guid: 737efc7c136bdaa479108913e4666859, type: 3}
       propertyPath: m_Color.g
-      value: 0.40000004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4380218632303042512, guid: 737efc7c136bdaa479108913e4666859, type: 3}
       propertyPath: m_Color.r
-      value: 0.8588236
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6996975678603446766, guid: 737efc7c136bdaa479108913e4666859, type: 3}
       propertyPath: m_Name
-      value: PileController
+      value: OpponentController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -74,73 +74,26 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6996975678603446766, guid: 737efc7c136bdaa479108913e4666859, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3529883154179854575}
-    - targetCorrespondingSourceObject: {fileID: 6996975678603446766, guid: 737efc7c136bdaa479108913e4666859, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8868350368454971088}
+      addedObject: {fileID: 3786266258241271460}
   m_SourcePrefab: {fileID: 100100000, guid: 737efc7c136bdaa479108913e4666859, type: 3}
---- !u!1 &8644179849132500675 stripped
+--- !u!1 &3111116131739267283 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6996975678603446766, guid: 737efc7c136bdaa479108913e4666859, type: 3}
-  m_PrefabInstance: {fileID: 1651707845354532653}
+  m_PrefabInstance: {fileID: 5347646246288537917}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3529883154179854575
+--- !u!114 &3786266258241271460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8644179849132500675}
+  m_GameObject: {fileID: 3111116131739267283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a95c02e4704cbc445b676b4368bc2c4e, type: 3}
+  m_Script: {fileID: 11500000, guid: bb58ca782cc3c6940ba7664cf42ac2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   identifier: 
-  basePiece: {fileID: 4552306296943575080, guid: 277879d73eee8ba4aae4f776f50a8eb7, type: 3}
-  baseButton: {fileID: 8056121996287068939, guid: 7d7f9da8c8ca7ac4789f4f103276d048, type: 3}
---- !u!61 &8868350368454971088
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8644179849132500675}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.947649, y: 4.1806307}
-  m_EdgeRadius: 0
+  show: 0
+  basePiece: {fileID: 7153104497564089517, guid: 0377d422deb002d4886aba61378dbc83, type: 3}
+  doHorizontalDisp: 0

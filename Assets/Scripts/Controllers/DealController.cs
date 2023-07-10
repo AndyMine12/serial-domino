@@ -47,6 +47,46 @@ public class DealController : Controller
         this.ActivatePieces();
     }
 
+    //For testing purposes only: Deals all remaining pieces in the table to opponents. And if any remains, fills the 'steal' pile
+    public void FillOpponents(){
+        if(this._mode.PlayerCount == 4)
+        {
+            for (int i=1; i<=3; i++)
+            {
+                for (int j=1; j<=7; j++)
+                {
+                    DealPiece piece = this._spawned[0];
+                    if (piece != null) { this.SendHandOpponent(new DominoID(piece.Id.ConvertInt), i); }
+                }
+            }
+        }
+        if(this._mode.PlayerCount == 2)
+        {
+            for (int j=1; j<=7; j++)
+            {
+                DealPiece piece = this._spawned[0];
+                if (piece != null) { this.SendHandOpponent(new DominoID(piece.Id.ConvertInt), 2); }
+            }
+        }
+        this.FillPile(); //Any remaining pieces must be sent to the pile
+    }
+
+    //Sends all remaining spawned pieces to the 'steal' pile
+    public void FillPile(){
+        while(this._spawned.Count > 0)
+        {
+            DealPiece piece = this._spawned[0];
+            if (piece != null)
+            {
+                this.SendPile(new DominoID (piece.Id.ConvertInt));
+            }
+            else //If any piece is null, no more pieces remain: break
+            {
+                break;
+            }
+        }
+    }
+
     //Create a new piece within the dealer's spawn zone
     public void InstantiatePiece (DominoID id) 
     {
@@ -121,6 +161,8 @@ public class DealController : Controller
             {
                 this.SendHand(piece);
             }
+            //TEST Deal remaining pieces amongst opponents?
+                this.FillOpponents();
         }
     }
 
@@ -141,9 +183,39 @@ public class DealController : Controller
 
             playerHand.AddPiece(new DominoID(id.ConvertInt));
             //to-do Must also send piece to network
-            //to-do Must also set game to 'wait' && lock pile
+            //to-do Must also set game to 'wait'
             this.DeletePiece(id);
         }
+    }
+    //Send a specific piece to an opponent's hand, using said opponent's number [1~3]. In a two-player game, always remains opponent2
+    public void SendHandOpponent(DominoID id, int opponent)
+    {
+        //Get Oponent Hand Controller from active controllers
+        Controller candidate = Controller.active["opponent" + opponent.ToString()];
+        if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Opponent #" + opponent.ToString() +" Controller not found"); }
+        if (candidate.GetType() != typeof(HandController))
+        {
+            throw new System.ArgumentException(nameof(candidate), "Controller registered as 'opponent" + opponent.ToString() +"' is not a Hand Controller");
+        }
+        HandController opponentHand = (HandController)candidate;
+
+        opponentHand.AddPiece(new DominoID(id.ConvertInt));
+        this.DeletePiece(id);
+    }
+    //Send a specific piece to the 'steal' pile
+    public void SendPile(DominoID id)
+    {
+        //Get Oponent Hand Controller from active controllers
+        Controller candidate = Controller.active["pile"];
+        if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Pile Controller not found"); }
+        if (candidate.GetType() != typeof(PileController))
+        {
+            throw new System.ArgumentException(nameof(candidate), "Controller registered as 'pile' is not a Pile Controller");
+        }
+        PileController pile = (PileController)candidate;
+
+        pile.InstantiatePiece(new DominoID(id.ConvertInt));
+        this.DeletePiece(id);
     }
 
     //Send a specific piece to the network adapter

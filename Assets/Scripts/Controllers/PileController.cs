@@ -6,9 +6,11 @@ using UnityEngine;
 public class PileController : Controller
 {
     public PilePiece basePiece;
+    public SkipButton baseButton;
     private List<PilePiece> _pile = new List<PilePiece>();
     private BoxCollider2D _spawnZone;
     private ModeController _mode;
+    private SkipButton _button;
 
     protected override void Start()
     {
@@ -30,6 +32,38 @@ public class PileController : Controller
             throw new System.ArgumentException(nameof(candidate), "Controller registered as 'mode' is not a Mode Controller");
         }
         this._mode = (ModeController)candidate;
+    }
+
+    protected void Update() {
+        this.CheckPile();
+    }
+
+    //If pile is empty, show skip button
+    public void CheckPile()
+    {
+        if(this._pile.Count == 0) //No pieces within 'steal' pile
+        {
+            if(this._button == null)
+            {
+                this._button = Instantiate(this.baseButton, this._spawnZone.bounds.center, Quaternion.identity);
+                this._button._controller = this;
+                this._button.Interact = this._mode.Mode == 1; //If the button is created outside of 'Standby' phase, lock it
+            }
+        }
+        else //Some pieces within 'steal' pile
+        {
+            if(this._button != null)
+            {
+                Destroy(this._button.gameObject);
+                this._button = null;
+            }
+        }
+    }
+
+    //Skip button was pressed
+    public void SkipTurn()
+    {
+        this._mode.endTurn(); //Turn was ended
     }
 
     //Create a new piece within the pile's spawn zone
@@ -78,6 +112,7 @@ public class PileController : Controller
         {
             objective.Interact = true;
         }
+        if(this._button != null) { this._button.Interact = true; }
     }
     //Set all pile pieces to be non interact-able by the player
     public void LockPile(){
@@ -85,6 +120,7 @@ public class PileController : Controller
         {
             objective.Interact = false;
         }
+        if(this._button != null) { this._button.Interact = false; }
     }
 
     //Send a specific piece to the player hand
@@ -103,9 +139,23 @@ public class PileController : Controller
 
             playerHand.AddPiece(new DominoID(id.ConvertInt));
             //to-do Must also send piece to network
-            //to-do Must also set game to 'wait' && lock pile
             this.DeletePiece(id);
         }
+    }
+    //Send a specific piece to an oponent's hand, using said oponent's number [1~3]. In a two-player game, always remains oponent2
+    public void SendHandOponent(DominoID id, int oponent)
+    {
+        //Get Oponent Hand Controller from active controllers
+        Controller candidate = Controller.active["oponent" + oponent.ToString()];
+        if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Oponent #" + oponent.ToString() +" Controller not found"); }
+        if (candidate.GetType() != typeof(HandController))
+        {
+            throw new System.ArgumentException(nameof(candidate), "Controller registered as 'oponent" + oponent.ToString() +"' is not a Hand Controller");
+        }
+        HandController oponentHand = (HandController)candidate;
+
+        oponentHand.AddPiece(new DominoID(id.ConvertInt));
+        this.DeletePiece(id);
     }
 
     //Send a specific piece to the network adapter

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Parent object that models a piece of domino. Can be linked to other domino pieces
-public abstract class DominoPiece : MonoBehaviour
+public abstract class DominoPiece : Colorable
 {
     //Domino pieces are linked via a double-linked-list
     protected DominoPiece _prevPiece = null;
@@ -19,8 +19,8 @@ public abstract class DominoPiece : MonoBehaviour
     public int TopValue => this._id.TopValue;
     public int BottomValue => this._id.BottomValue;
     public DominoID Id => this._id;
-    public bool Interact {get => this._canInteract; set => this._canInteract = value;}
-    public virtual bool Colorize => true;
+    public override bool Interact {get => this._canInteract; set => this._canInteract = value;}
+    public override bool Colorize => true;
     public DominoPiece PrevPiece {get => this._prevPiece; set => this._prevPiece = value;}
     public DominoPiece NextPiece {get => this._nextPiece; set => this._nextPiece = value;}
 
