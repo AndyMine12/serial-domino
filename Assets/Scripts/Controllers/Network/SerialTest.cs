@@ -10,8 +10,8 @@ public class SerialTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        port.PortName = "COM2";
-        port.BaudRate = 9600;
+        port.PortName = "COM1";
+        port.BaudRate = 2400;
         port.Parity = Parity.None;
         port.DataBits = 8;
         port.StopBits = StopBits.One;
@@ -19,17 +19,18 @@ public class SerialTest : MonoBehaviour
         port.ReadTimeout = 50;
 
         port.Open();
+        port.WriteLine("esto es una prueba");
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if(port.ReadTo("-") == "asd")
-        {
-            Debug.Log("Recibido");
-            Debug.Log("Resto del mensaje: " + port.ReadLine());
-        }
-    }
+    // void Update()
+    // {
+    //     if(port.ReadTo("-") == "asd")
+    //     {
+    //         Debug.Log("Recibido");
+    //         Debug.Log("Resto del mensaje: " + port.ReadLine());
+    //     }
+    // }
 
     
 }

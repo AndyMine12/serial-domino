@@ -37,21 +37,6 @@ public class HandController : Controller
                 this._handHead.updatePos(spawnPos);
             }
         }
-
-        //TEST Activate full hand, on pair inserts. On size 4, only activate 6|6
-            if(this.handSize % 2 == 0)
-            {
-                if(this.handSize == 4)
-                {
-                    this.ActivateHand(new DominoID(47));
-                }
-                else
-                    this.ActivateHand();
-            }
-            else
-            {
-                this.LockHand();
-            }
     }
 
     public HandPiece InstantiatePiece(DominoID id){

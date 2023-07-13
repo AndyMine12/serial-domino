@@ -11,8 +11,9 @@ public class DealController : Controller
     private ModeController _mode;
     private List<DominoID> _selected = new List<DominoID>();
     private int _currentDepth = 100;
+    public bool isDealing => this._spawned.Count > 0;
 
-    protected override void Start()
+    protected void Awake()
     {
         //Activate controller
         this.identifier = "deal";
@@ -24,14 +25,12 @@ public class DealController : Controller
             Debug.Log("ERROR. Spawn Zone BoxCollider not found. Deleting controller");
             Destroy(this.gameObject);
         }
+    }
+
+    protected override void Start()
+    {
         //Get mode controller
-        Controller candidate = Controller.active["mode"];
-        if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Mode Controller not found"); }
-        if (candidate.GetType() != typeof(ModeController))
-        {
-            throw new System.ArgumentException(nameof(candidate), "Controller registered as 'mode' is not a Mode Controller");
-        }
-        this._mode = (ModeController)candidate;
+        this._mode = Controller.GetActiveController<ModeController>("mode");
     }
 
     //Create a new full-pool of pieces
@@ -56,7 +55,7 @@ public class DealController : Controller
                 for (int j=1; j<=7; j++)
                 {
                     DealPiece piece = this._spawned[0];
-                    if (piece != null) { this.SendHandOpponent(new DominoID(piece.Id.ConvertInt), i); }
+                    if (piece != null) { this.SendHandOpponent(new DominoID(piece.Id.ConvertInt), "opponent" + i.ToString()); }
                 }
             }
         }
@@ -65,7 +64,7 @@ public class DealController : Controller
             for (int j=1; j<=7; j++)
             {
                 DealPiece piece = this._spawned[0];
-                if (piece != null) { this.SendHandOpponent(new DominoID(piece.Id.ConvertInt), 2); }
+                if (piece != null) { this.SendHandOpponent(new DominoID(piece.Id.ConvertInt), "opponent2"); }
             }
         }
         this.FillPile(); //Any remaining pieces must be sent to the pile
@@ -161,8 +160,6 @@ public class DealController : Controller
             {
                 this.SendHand(piece);
             }
-            //TEST Deal remaining pieces amongst opponents?
-                this.FillOpponents();
         }
     }
 
@@ -173,31 +170,19 @@ public class DealController : Controller
         if(this._mode.Mode == 0) //If game is in dealing phase
         {
             //Get Hand Controller from active controllers
-            Controller candidate = Controller.active["hand"];
-            if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Hand Controller not found"); }
-            if (candidate.GetType() != typeof(HandController))
-            {
-                throw new System.ArgumentException(nameof(candidate), "Controller registered as 'hand' is not a Hand Controller");
-            }
-            HandController playerHand = (HandController)candidate;
+            HandController playerHand = Controller.GetActiveController<HandController>("hand");
 
             playerHand.AddPiece(new DominoID(id.ConvertInt));
-            //to-do Must also send piece to network
-            //to-do Must also set game to 'wait'
+            this.SendNetwork(new DominoID(id.ConvertInt));
+            this._mode.endTurn();
             this.DeletePiece(id);
         }
     }
     //Send a specific piece to an opponent's hand, using said opponent's number [1~3]. In a two-player game, always remains opponent2
-    public void SendHandOpponent(DominoID id, int opponent)
+    public void SendHandOpponent(DominoID id, string opponentId)
     {
-        //Get Oponent Hand Controller from active controllers
-        Controller candidate = Controller.active["opponent" + opponent.ToString()];
-        if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Opponent #" + opponent.ToString() +" Controller not found"); }
-        if (candidate.GetType() != typeof(HandController))
-        {
-            throw new System.ArgumentException(nameof(candidate), "Controller registered as 'opponent" + opponent.ToString() +"' is not a Hand Controller");
-        }
-        HandController opponentHand = (HandController)candidate;
+        //Get Opponent Hand Controller from active controllers
+        HandController opponentHand = Controller.GetActiveController<HandController>(opponentId);
 
         opponentHand.AddPiece(new DominoID(id.ConvertInt));
         this.DeletePiece(id);
@@ -205,14 +190,8 @@ public class DealController : Controller
     //Send a specific piece to the 'steal' pile
     public void SendPile(DominoID id)
     {
-        //Get Oponent Hand Controller from active controllers
-        Controller candidate = Controller.active["pile"];
-        if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Pile Controller not found"); }
-        if (candidate.GetType() != typeof(PileController))
-        {
-            throw new System.ArgumentException(nameof(candidate), "Controller registered as 'pile' is not a Pile Controller");
-        }
-        PileController pile = (PileController)candidate;
+        //Get Pile Controller from active controllers
+        PileController pile = Controller.GetActiveController<PileController>("pile");
 
         pile.InstantiatePiece(new DominoID(id.ConvertInt));
         this.DeletePiece(id);
@@ -222,13 +201,7 @@ public class DealController : Controller
     public bool SendNetwork(DominoID id)
     {
         //Get network adapter from active controllers
-        Controller candidate = Controller.active["network"];
-        if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Network Adapter not found");}
-        if (candidate.GetType() != typeof(NetworkAdapter))
-        {
-            throw new System.ArgumentException(nameof(candidate), "Controller registered as 'network' is not a Network Adapter");
-        }
-        NetworkAdapter network = (NetworkAdapter)candidate;
+        NetworkAdapter network = Controller.GetActiveController<NetworkAdapter>("network");
         
         return ( network.setMode(this.identifier) && network.queuePiece(new DominoID(id.ConvertInt)) );
     }

@@ -7,6 +7,7 @@ public abstract class NetworkAdapter : Controller
 {
     private bool isAvailable = false; //Is the adapter available for requests
     public bool Available => this.isAvailable;
+    protected string _commType = "standby"; //The 'mode' of communications that the adapter is on
 
     //It must activate itself, as a controller
     protected override void Start()
@@ -29,9 +30,9 @@ public abstract class NetworkAdapter : Controller
     //Send a specific piece through the network
     public abstract bool sendPiece(DominoID id);
     //Recieve a piece through the network
-    public abstract DominoID recievePiece();
+    public abstract void recievePiece(DominoID id);
     // Recieve a mode setting through the network
-    public abstract string recieveMode();
+    public abstract void recieveMode(string mode);
     //Initialize network communications
     public abstract bool initNetwork();
     //Handle exception: Trigger if initialization fails

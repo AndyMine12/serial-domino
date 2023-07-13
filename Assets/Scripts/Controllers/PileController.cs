@@ -24,14 +24,8 @@ public class PileController : Controller
             Debug.Log("ERROR. Spawn Zone BoxCollider not found. Deleting controller");
             Destroy(this.gameObject);
         }
-        //Get mode controller
-        Controller candidate = Controller.active["mode"];
-        if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Mode Controller not found"); }
-        if (candidate.GetType() != typeof(ModeController))
-        {
-            throw new System.ArgumentException(nameof(candidate), "Controller registered as 'mode' is not a Mode Controller");
-        }
-        this._mode = (ModeController)candidate;
+        //Get mode controller from active controllers
+        this._mode = Controller.GetActiveController<ModeController>("mode");
     }
 
     protected void Update() {
@@ -129,32 +123,20 @@ public class PileController : Controller
         if(this._mode.Mode == 1) //If game is in standby phase
         {
             //Get Hand Controller from active controllers
-            Controller candidate = Controller.active["hand"];
-            if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Hand Controller not found"); }
-            if (candidate.GetType() != typeof(HandController))
-            {
-                throw new System.ArgumentException(nameof(candidate), "Controller registered as 'hand' is not a Hand Controller");
-            }
-            HandController playerHand = (HandController)candidate;
+            HandController playerHand = Controller.GetActiveController<HandController>("hand");
 
             playerHand.AddPiece(new DominoID(id.ConvertInt));
-            //to-do Must also send piece to network
+            this.SendNetwork(new DominoID (id.ConvertInt));
             this.DeletePiece(id);
         }
     }
-    //Send a specific piece to an oponent's hand, using said oponent's number [1~3]. In a two-player game, always remains oponent2
-    public void SendHandOponent(DominoID id, int oponent)
+    //Send a specific piece to an opponent's hand, using said opponent's number [1~3]. In a two-player game, always remains opponent2
+    public void SendHandOpponent(DominoID id, string opponentId)
     {
-        //Get Oponent Hand Controller from active controllers
-        Controller candidate = Controller.active["oponent" + oponent.ToString()];
-        if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Oponent #" + oponent.ToString() +" Controller not found"); }
-        if (candidate.GetType() != typeof(HandController))
-        {
-            throw new System.ArgumentException(nameof(candidate), "Controller registered as 'oponent" + oponent.ToString() +"' is not a Hand Controller");
-        }
-        HandController oponentHand = (HandController)candidate;
+        //Get Opponent Hand Controller from active controllers
+        HandController opponentHand = Controller.GetActiveController<HandController>(opponentId);
 
-        oponentHand.AddPiece(new DominoID(id.ConvertInt));
+        opponentHand.AddPiece(new DominoID(id.ConvertInt));
         this.DeletePiece(id);
     }
 
@@ -162,13 +144,7 @@ public class PileController : Controller
     public bool SendNetwork(DominoID id)
     {
         //Get network adapter from active controllers
-        Controller candidate = Controller.active["network"];
-        if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Network Adapter not found");}
-        if (candidate.GetType() != typeof(NetworkAdapter))
-        {
-            throw new System.ArgumentException(nameof(candidate), "Controller registered as 'network' is not a Network Adapter");
-        }
-        NetworkAdapter network = (NetworkAdapter)candidate;
+        NetworkAdapter network = Controller.GetActiveController<NetworkAdapter>("network");
         
         return ( network.setMode(this.identifier) && network.queuePiece(new DominoID(id.ConvertInt)) );
     }

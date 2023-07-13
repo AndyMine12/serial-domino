@@ -6,37 +6,38 @@ public class ModeController : Controller
 {
     private int _mode = -1;
     //Modes: -1 -> Wait, 0 -> Dealer, 1 -> Standby
-    public int _players = 4;
+    private int _players = Setup.PlayerCount;
+    private int playerId = Setup.PlayerId; //Is this Player 1? Player 2? Etc
     public int Mode => this._mode;
     public int PlayerCount => this._players;
+    public int Player => this.playerId;
 
     //Mode controller must be initialized and activated before all other controllers
     protected void Awake(){
         this.identifier = "mode";
         Random.InitState(Time.frameCount); //Initialize random number generator
         base.Start();
+
+        //TEST
+            Debug.Log(this.Player);
+            Debug.Log(this.PlayerCount);
     }
     protected override void Start(){
         
         //to-do Set mode according to player selection
-        //TEST Begin as Player 1: Dealing pieces
-            this.generatePieces();
+        this.generatePieces();
+        if(this.playerId == 1)
+        {
+            this.dealTurn();
+        }
     }
 
     public void generatePieces(){
         //Get Deal Controller from active controllers
-        Controller candidate = Controller.active["deal"];
-        if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Deal Controller not found"); }
-        if (candidate.GetType() != typeof(DealController))
-        {
-            throw new System.ArgumentException(nameof(candidate), "Controller registered as 'deal' is not a Deal Controller");
-        }
-        DealController dealer = (DealController)candidate;
+        DealController dealer = Controller.GetActiveController<DealController>("deal");
 
         //Generate and deal pieces
         dealer.GenerateAll();
-        //The player must pick their pieces, now we are in dealing mode
-        this.dealTurn();
     }
 
     public void dealTurn()
@@ -52,19 +53,13 @@ public class ModeController : Controller
     public void endTurn(){
         this._mode = -1;
         //to-do Tell all other controllers to lock themselves
-        this.SendNetwork();
+        this.SendStartTurn();
     }
 
-    //Send a specific action to the network adapter
-    public bool SendNetwork()
+    //Tell the network adapter to let the next player take their turn
+    public bool SendStartTurn()
     {
-        Controller candidate = Controller.active["network"];
-        if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Network Adapter not found");}
-        if (candidate.GetType() != typeof(NetworkAdapter))
-        {
-            throw new System.ArgumentException(nameof(candidate), "Controller registered as 'network' is not a Network Adapter");
-        }
-        NetworkAdapter network = (NetworkAdapter)candidate;
+        NetworkAdapter network = Controller.GetActiveController<NetworkAdapter>("network");
         
         return ( network.setMode(this.identifier) && network.sendMode("play") );
     }
