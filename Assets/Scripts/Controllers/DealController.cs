@@ -160,6 +160,7 @@ public class DealController : Controller
             {
                 this.SendHand(piece);
             }
+            this._mode.endTurn();
         }
     }
 
@@ -174,8 +175,11 @@ public class DealController : Controller
 
             playerHand.AddPiece(new DominoID(id.ConvertInt));
             this.SendNetwork(new DominoID(id.ConvertInt));
-            this._mode.endTurn();
             this.DeletePiece(id);
+            // if (this._selected.Count == 0)
+            // {
+            //     this._mode.endTurn();
+            // }
         }
     }
     //Send a specific piece to an opponent's hand, using said opponent's number [1~3]. In a two-player game, always remains opponent2

@@ -13,7 +13,7 @@ public abstract class Controller : MonoBehaviour
         if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Controller '" + identifier + "' not found");}
         if (candidate.GetType() != typeof(T))
         {
-            throw new System.ArgumentException(nameof(candidate), "Controller registered as '" + identifier + "' is not a " + typeof(T).ToString());
+            //throw new System.ArgumentException(nameof(candidate), "Controller registered as '" + identifier + "' is not a " + typeof(T).ToString());
         }
         T request = (T)candidate;
         return request;

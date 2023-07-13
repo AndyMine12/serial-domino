@@ -17,9 +17,6 @@ public class SerialTest : MonoBehaviour
         port.StopBits = StopBits.One;
         port.Handshake = Handshake.None;
         port.ReadTimeout = 50;
-
-        port.Open();
-        port.WriteLine("esto es una prueba");
     }
 
     // Update is called once per frame
