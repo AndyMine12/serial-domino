@@ -43,9 +43,6 @@ public class SerialAdapter : NetworkAdapter
 
     public override bool initNetwork()
     {
-        //TEST
-            Debug.Log(this.portName);
-            Debug.Log(this.baudRate);
         serialPort = new SerialPort(portName,baudRate, parity, dataBits, stopBits);
         serialPort.Handshake = handshake;
         serialPort.ReadTimeout = readTimeout;

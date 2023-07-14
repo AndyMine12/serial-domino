@@ -17,10 +17,6 @@ public class ModeController : Controller
         this.identifier = "mode";
         Random.InitState(Time.frameCount); //Initialize random number generator
         base.Start();
-
-        //TEST
-            Debug.Log(this.Player);
-            Debug.Log(this.PlayerCount);
     }
     protected override void Start(){
         
