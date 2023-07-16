@@ -15,6 +15,7 @@ public class SerialAdapter : NetworkAdapter
     public Handshake handshake = Handshake.None;
     public int readTimeout = 50;
     public float watchdogInterval = 0.25f;
+    public float actionDelay = 0.1f;
     public string endOfMessageChar = "#";
     public char parserSepareChar = '/';
     private ModeController _mode;
@@ -23,6 +24,8 @@ public class SerialAdapter : NetworkAdapter
     private int _partnerId = 0; //Identifies this player's teammate in a four-player match
     private Thread _readThread;
     private bool _doComms = true;
+    public DealController hardcodedDealer;
+    private List<String> messagePool = new List<String>();
 
     protected override void Start()
     {
@@ -68,6 +71,7 @@ public class SerialAdapter : NetworkAdapter
 
         this._readThread = new Thread(readMethod);
         this._readThread.Start();
+        StartCoroutine(this.actionExecuter());
 
         return true; //Network has been setup successfully
     }
@@ -81,15 +85,30 @@ public class SerialAdapter : NetworkAdapter
                 string message = this.readSerialUntil(this.endOfMessageChar);
                 //TEST jiji
                     Debug.Log(message);
-                DominoID recievedPiece = this.ParseIn(message);
-                //TEST jiji x4
-                    Debug.Log("Domino! " + recievedPiece.ToString());
-                if (recievedPiece != null) { this.recievePiece(recievedPiece); }
+                this.messagePool.Add(message);
             }
             catch (System.Exception) 
             { 
                 //If read fails, just catch exception
             }
+        }
+    }
+
+    //If any messages are logged, execute them
+    public IEnumerator actionExecuter()
+    {
+        while(this._doComms)
+        {
+            if (this.messagePool.Count > 0)
+            {
+                string message = this.messagePool[0];
+                DominoID recievedPiece = this.ParseIn(message);
+                //TEST jiji x4
+                    Debug.Log("Domino! " + recievedPiece.ToString());
+                if (recievedPiece != null) { this.recievePiece(recievedPiece); }
+                this.messagePool.Remove(message);
+            }
+            yield return new WaitForSeconds(this.actionDelay);
         }
     }
 
@@ -266,8 +285,10 @@ public class SerialAdapter : NetworkAdapter
                     Debug.Log("Sender: " + this._senderId.ToString());
                     Debug.Log("Opponent: " + opponentId + "!");
                     Debug.Log("Domino: " + id.ToString());
-                DealController dealer = Controller.GetActiveController<DealController>("deal");
-                dealer.SendHandOpponent(new DominoID(id.ConvertInt), opponentId);
+                //DealController dealer = Controller.GetActiveController<DealController>("deal");
+                //dealer.SendHandOpponent(new DominoID(id.ConvertInt), opponentId);
+                //TEST About to cry. Lots.
+                hardcodedDealer.SendHandOpponent(new DominoID(id.ConvertInt), opponentId);
                 break;
             }
             case "pile":
@@ -290,8 +311,11 @@ public class SerialAdapter : NetworkAdapter
     protected override bool disconnect()
     {
         this.sendMode("disconnect");
+        this._doComms = false; //Stop communications
         this._readThread.Join(); //Close reading thread
         this.serialPort.Close(); //Close port
+        StopAllCoroutines(); //Stop coroutines
+        
         //to-do Send to main menu
         return true;
     }

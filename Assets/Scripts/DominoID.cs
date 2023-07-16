@@ -130,5 +130,10 @@ public class DominoID
     {
         return "{" + this._id[0].ToString() + "|" + this._id[1].ToString() + "}"; 
     }
+    //Returns the rotated version of this Id
+    public DominoID getRotate()
+    {
+        return new DominoID(new int[2] {this.TopValue, this.BottomValue});
+    }
 
 }

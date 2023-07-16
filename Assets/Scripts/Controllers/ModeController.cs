@@ -13,12 +13,12 @@ public class ModeController : Controller
     public int Player => this.playerId;
 
     //Mode controller must be initialized and activated before all other controllers
-    protected void Awake(){
+    protected override void Awake(){
         this.identifier = "mode";
         Random.InitState(Time.frameCount); //Initialize random number generator
-        base.Start();
+        base.Awake();
     }
-    protected override void Start(){
+    protected void Start(){
         
         //to-do Set mode according to player selection
         this.generatePieces();

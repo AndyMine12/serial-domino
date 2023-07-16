@@ -5,7 +5,7 @@ using UnityEngine;
 public class Setup : MonoBehaviour
 {
     public static string portName = "COM1";
-    public static int baudRate = 9600;
+    public static int baudRate = 4800;
     public static int PlayerId = 1;
     public static int PlayerCount = 4;
 

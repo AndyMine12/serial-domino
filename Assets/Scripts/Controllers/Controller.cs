@@ -9,8 +9,6 @@ public abstract class Controller : MonoBehaviour
 
     public static T GetActiveController<T>(string identifier) where T:Controller
     {
-        //TEST I SUFFER
-            Debug.Log("Requesting controller... " + identifier);
         Controller candidate = Controller.active[identifier];
         if (candidate == null) { throw new System.ArgumentNullException(nameof(candidate), "Controller '" + identifier + "' not found");}
         if (!(candidate is T)) //Types aren't compatible for casting
@@ -21,7 +19,7 @@ public abstract class Controller : MonoBehaviour
         return request;
     }
 
-    protected virtual void Start() {
+    protected virtual void Awake() {
         try 
         {
             Controller.active.Add(identifier, this);

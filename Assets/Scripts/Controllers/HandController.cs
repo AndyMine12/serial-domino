@@ -5,24 +5,35 @@ using UnityEngine;
 public class HandController : Controller
 {
     private HandPiece _handHead = null;
+    private Vector3 _spawnPos;
     private int handSize = 0;
     public bool show = false; //Is this hand visible to the player?
     public HandPiece basePiece;
     public bool doHorizontalDisp = true; //Is this hand displayed horizontally?
 
-    protected override void Start(){
+    protected override void Awake(){
         if (this.identifier == "") {this.identifier = "hand";}
-        base.Start();
+        base.Awake();
+    }
+
+    protected void Start(){
+        this._spawnPos = this.transform.position;
     }
 
     public void AddPiece(DominoID id){
         //TEST AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            Debug.Log("Reached AddPiece. ID: " + this.identifier + " | " + id.ToString());
+            Debug.Log("Reached AddPiece. ID: " + this.identifier + "///" + id.ToString(), this);
         
         HandPiece newPiece = this.InstantiatePiece(id);
+        //TEST AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            Debug.Log("Outside InstantiatePiece()");
         this.handSize += 1; //Hand is bigger
 
-        if (this._handHead == null) {this._handHead = newPiece;}
+        if (this._handHead == null) 
+        {
+            Debug.Log("Created head!");
+            this._handHead = newPiece;
+        }
         else
         {
             if(this._handHead.appendPiece(newPiece))
@@ -36,7 +47,7 @@ public class HandController : Controller
                 {
                     spawnAdjust = new Vector3(0f, this._handHead.PieceSize.y * 2, 0f);
                 }
-                Vector3 spawnPos = this.transform.position - ((this.handSize / 2) * spawnAdjust);
+                Vector3 spawnPos = this._spawnPos - ((this.handSize / 2) * spawnAdjust);
                 this._handHead.updatePos(spawnPos);
             }
         }
@@ -47,8 +58,17 @@ public class HandController : Controller
     }
 
     public HandPiece InstantiatePiece(DominoID id){
-        HandPiece newPiece = Instantiate(basePiece,this.transform.position,Quaternion.identity);
+        //TEST tracerouting
+            Debug.Log("Inside InstantiatePiece!", this);
+        HandPiece newPiece;
+        //TEST
+            Debug.Log("Local declaration");
+        newPiece = Object.Instantiate(this.basePiece,this._spawnPos,Quaternion.identity);
+        //TEST tracin' v3
+            Debug.Log("Instantiated!");
         newPiece.changeId(id);
+        //TEST moar tracin
+            Debug.Log("Created le piece: " + newPiece.Id.ToString());
         if(newPiece.isVisible != this.show){newPiece.flip();}
         if(newPiece.isAlternate != this.doHorizontalDisp){newPiece.toggleAlternate();}
         newPiece._controller = this;

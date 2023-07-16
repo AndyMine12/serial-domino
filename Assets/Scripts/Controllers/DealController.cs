@@ -10,14 +10,15 @@ public class DealController : Controller
     private BoxCollider2D _spawnZone;
     private ModeController _mode;
     private List<DominoID> _selected = new List<DominoID>();
+    public HandController testOP2;
     private int _currentDepth = 100;
     public bool isDealing => this._spawned.Count > 0;
 
-    protected void Awake()
+    protected override void Awake()
     {
         //Activate controller
         this.identifier = "deal";
-        base.Start();
+        base.Awake();
         //Initialize spawn zone
         this._spawnZone = this.GetComponent<BoxCollider2D>();
         if (this._spawnZone == null)
@@ -27,7 +28,7 @@ public class DealController : Controller
         }
     }
 
-    protected override void Start()
+    protected void Start()
     {
         //Get mode controller
         this._mode = Controller.GetActiveController<ModeController>("mode");
@@ -43,7 +44,9 @@ public class DealController : Controller
                 this.InstantiatePiece(new DominoID(new int[2] {bottomVal, topVal}));
             }
         }
-        this.ActivatePieces();
+        this.ActivatePieces(); //to-do Activate only if on self turn
+        //TEST Sending okay?
+            this.SendHandOpponent(new DominoID(48), "opponent2");
     }
 
     //For testing purposes only: Deals all remaining pieces in the table to opponents. And if any remains, fills the 'steal' pile
@@ -120,7 +123,7 @@ public class DealController : Controller
         DealPiece found = null;
         foreach(DealPiece objective in this._spawned)
         {
-            if(objective.Id.ConvertInt == id.ConvertInt)
+            if( (objective.Id.ConvertInt == id.ConvertInt)||(objective.Id.ConvertInt == id.getRotate().ConvertInt) )
             {
                 found = objective;
                 break;
@@ -182,27 +185,24 @@ public class DealController : Controller
             // }
         }
     }
+    
     //Send a specific piece to an opponent's hand, using said opponent's number [1~3]. In a two-player game, always remains opponent2
     public void SendHandOpponent(DominoID id, string opponentId)
     {
-        //Get Opponent Hand Controller from active controllers
-        HandController opponentHand = Controller.GetActiveController<HandController>(opponentId);
-
-        //TEST teeeeeeeeeestin'
+         //TEST teeeeeeeeeestin'
             Debug.Log("Reached sendHandOpponent!");
-            if(opponentHand == null)
-            {
-                Debug.Log("The only constant is suffering. Thus I am null");
-            }
-            else
-            {
-                Debug.Log("Target piece: " + id.ToString());
-                Debug.Log("Identifier: " + opponentId + "!");
-                Debug.Log("Controller ID: " + opponentHand.identifier);
-            }
 
-        opponentHand.AddPiece(new DominoID(id.ConvertInt));
+        //Get Opponent Hand Controller from active controllers
+        //HandController opponentHand = Controller.GetActiveController<HandController>(opponentId);
+        
+
+        //opponentHand.AddPiece(new DominoID(id.ConvertInt));
+        this.testOP2.AddPiece(new DominoID(id.ConvertInt));
+        //TEST
+            Debug.Log("Added!");
         this.DeletePiece(id);
+        //TEST
+            Debug.Log("Deleted!");
     }
     //Send a specific piece to the 'steal' pile
     public void SendPile(DominoID id)

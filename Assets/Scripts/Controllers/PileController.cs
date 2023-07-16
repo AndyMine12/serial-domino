@@ -12,11 +12,14 @@ public class PileController : Controller
     private ModeController _mode;
     private SkipButton _button;
 
-    protected override void Start()
+    protected override void Awake()
     {
         //Activate controller
         this.identifier = "pile";
-        base.Start();
+        base.Awake();
+    }
+    protected void Start()
+    {
         //Initialize spawn zone
         this._spawnZone = this.GetComponent<BoxCollider2D>();
         if (this._spawnZone == null)
@@ -91,7 +94,7 @@ public class PileController : Controller
         PilePiece found = null;
         foreach(PilePiece objective in this._pile)
         {
-            if(objective.Id.ConvertInt == id.ConvertInt)
+            if((objective.Id.ConvertInt == id.ConvertInt)||(objective.Id.ConvertInt == id.getRotate().ConvertInt))
             {
                 found = objective;
                 break;
