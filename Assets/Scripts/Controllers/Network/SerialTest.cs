@@ -11,15 +11,16 @@ public class SerialTest : MonoBehaviour
     void Start()
     {
         port.PortName = "COM1";
-        port.BaudRate = 2400;
+        port.BaudRate = 4800;
         port.Parity = Parity.None;
         port.DataBits = 8;
         port.StopBits = StopBits.One;
         port.Handshake = Handshake.None;
         port.ReadTimeout = 50;
+        //port.Open();
     }
 
-    // Update is called once per frame
+    //Update is called once per frame
     // void Update()
     // {
     //     if(port.ReadTo("-") == "asd")

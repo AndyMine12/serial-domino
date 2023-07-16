@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO.Ports;
 using System;
+using System.Threading;
 
 public class SerialAdapter : NetworkAdapter
 {
@@ -20,6 +21,8 @@ public class SerialAdapter : NetworkAdapter
     private SerialPort serialPort;
     private int _senderId = 0; //Identifies the number of the player that sent the message
     private int _partnerId = 0; //Identifies this player's teammate in a four-player match
+    private Thread _readThread;
+    private bool _doComms = true;
 
     protected override void Start()
     {
@@ -39,6 +42,20 @@ public class SerialAdapter : NetworkAdapter
                 this._partnerId = this._mode.Player + 1;
             }
         }
+        if (this._mode.PlayerCount == 2) //In a 2P game, the partner is actually the rival
+        {
+            if(this._mode.Player == 1)
+            {
+                this._partnerId = 2;
+            }
+            else
+            {
+                this._partnerId = 1;
+            }
+        }
+        //TEST mor testin
+            Debug.Log("Me is " + this._mode.Player);
+            Debug.Log("My partner! " + this._partnerId.ToString());
     }
 
     public override bool initNetwork()
@@ -49,47 +66,67 @@ public class SerialAdapter : NetworkAdapter
 
         serialPort.Open();
 
-        StartCoroutine(this.watchdog());
+        this._readThread = new Thread(readMethod);
+        this._readThread.Start();
 
         return true; //Network has been setup successfully
     }
 
-    //Keep 'listening' for incoming messages, if any come through, react accordingly
-    public IEnumerator watchdog()
+    public void readMethod()
     {
-        bool doWait = false;
-        yield return new WaitForEndOfFrame();
-        while (true)
+        while(this._doComms)
         {
-            doWait = false;
             try
             {
-                if(this.Available)
-                {
-                    string message = this.readSerialUntil(this.endOfMessageChar);
-                    DominoID recievedPiece = this.ParseIn(message);
-                    if (recievedPiece != null) { this.recievePiece(recievedPiece); }
-                    this.listen(); //Parsing finished, can listen to new petitions
-                }
-                else
-                {
-                    doWait = true;
-                }
+                string message = this.readSerialUntil(this.endOfMessageChar);
+                //TEST jiji
+                    Debug.Log(message);
+                DominoID recievedPiece = this.ParseIn(message);
+                //TEST jiji x4
+                    Debug.Log("Domino! " + recievedPiece.ToString());
+                if (recievedPiece != null) { this.recievePiece(recievedPiece); }
             }
-            catch (System.Exception)
-            {
-                //If no message is found, then wait and retry
-                doWait = true;
+            catch (System.Exception) 
+            { 
+                //If read fails, just catch exception
             }
-            if (doWait) { yield return new WaitForSecondsRealtime(this.watchdogInterval); }
         }
     }
+
+    //Keep 'listening' for incoming messages, if any come through, react accordingly
+    // public IEnumerator watchdog()
+    // {
+    //     bool doWait = false;
+    //     yield return new WaitForEndOfFrame();
+    //     while (true)
+    //     {
+    //         doWait = false;
+    //         try
+    //         {
+    //             if(this.Available)
+    //             {
+    //                 string message = this.readSerialUntil(this.endOfMessageChar);
+    //                 DominoID recievedPiece = this.ParseIn(message);
+    //                 if (recievedPiece != null) { this.recievePiece(recievedPiece); }
+    //                 this.listen(); //Parsing finished, can listen to new petitions
+    //             }
+    //             else
+    //             {
+    //                 doWait = true;
+    //             }
+    //         }
+    //         catch (System.Exception)
+    //         {
+    //             //If no message is found, then wait and retry
+    //             doWait = true;
+    //         }
+    //         if (doWait) { yield return new WaitForSecondsRealtime(this.watchdogInterval); }
+    //     }
+    // }
 
     //Parse incoming messages and set communications mode/recieved piece from string recieved
     public DominoID ParseIn(string message)
     {
-        this.ignore(); //While this controller is parsing messages, ignore incoming messages
-
         string[] parsed = new string[3] {"", "", ""}; //The message is sent in order player->mode->id, separated by the special char
         int index = 0;
         foreach (char letter in message)
@@ -103,6 +140,12 @@ public class SerialAdapter : NetworkAdapter
                 index += 1;
             }
         }
+        //TEST jiji x2
+            Debug.Log("Parsed!");
+            for(int i=0; i<=2; i++)
+            {
+                Debug.Log("<" + i.ToString() + "> " + parsed[i]);
+            }
 
         this._senderId = Convert.ToInt32(parsed[0]);
         //If this player did send the message, throw it
@@ -113,6 +156,8 @@ public class SerialAdapter : NetworkAdapter
         else //If this player did not send it, resend and process it
         {
             this.recieveMode(parsed[1]); //Modify this adapter's mode
+            //TEST jiji x3
+                Debug.Log("My mode! " + this._commType);
             this.sendSerialMessage(message + this.endOfMessageChar); //Resend message
 
             if (parsed[2] != "") //If the message included a piece, return it
@@ -150,7 +195,7 @@ public class SerialAdapter : NetworkAdapter
     public override bool failNetwork()
     {
         //to-do Show error message and send user back to main menu
-        StopCoroutine(this.watchdog());
+        
         return true; //Failure handled successfully
     }
 
@@ -172,6 +217,7 @@ public class SerialAdapter : NetworkAdapter
 
     public override void recieveMode(string mode)
     {
+        this.setMode(mode);
         switch(mode)
         {
             case "deal": //No additional actions are needed for these modes
@@ -214,14 +260,21 @@ public class SerialAdapter : NetworkAdapter
         {
             case "deal":
             {
+                string opponentId = this.getOpponentID(this._senderId);
+                //TEST jiji x5
+                    Debug.Log("Reached case deal!");
+                    Debug.Log("Sender: " + this._senderId.ToString());
+                    Debug.Log("Opponent: " + opponentId + "!");
+                    Debug.Log("Domino: " + id.ToString());
                 DealController dealer = Controller.GetActiveController<DealController>("deal");
-                dealer.SendHandOpponent(id, this.getOpponentID(this._senderId));
+                dealer.SendHandOpponent(new DominoID(id.ConvertInt), opponentId);
                 break;
             }
             case "pile":
             {
+                string opponentId = this.getOpponentID(this._senderId);
                 PileController pile = Controller.GetActiveController<PileController>("pile");
-                pile.SendHandOpponent(id, this.getOpponentID(this._senderId));
+                pile.SendHandOpponent(new DominoID(id.ConvertInt), opponentId);
                 break;
             }
             case "table":
@@ -237,6 +290,7 @@ public class SerialAdapter : NetworkAdapter
     protected override bool disconnect()
     {
         this.sendMode("disconnect");
+        this._readThread.Join(); //Close reading thread
         this.serialPort.Close(); //Close port
         //to-do Send to main menu
         return true;

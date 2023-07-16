@@ -16,6 +16,9 @@ public class HandController : Controller
     }
 
     public void AddPiece(DominoID id){
+        //TEST AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            Debug.Log("Reached AddPiece. ID: " + this.identifier + " | " + id.ToString());
+        
         HandPiece newPiece = this.InstantiatePiece(id);
         this.handSize += 1; //Hand is bigger
 
@@ -37,6 +40,10 @@ public class HandController : Controller
                 this._handHead.updatePos(spawnPos);
             }
         }
+
+        //TEST BBBBBBBBBBB
+            Debug.Log("Head: " + this._handHead.ToString());
+            Debug.Log("Size: " + this.handSize);
     }
 
     public HandPiece InstantiatePiece(DominoID id){

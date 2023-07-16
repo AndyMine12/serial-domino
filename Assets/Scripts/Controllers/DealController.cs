@@ -188,6 +188,19 @@ public class DealController : Controller
         //Get Opponent Hand Controller from active controllers
         HandController opponentHand = Controller.GetActiveController<HandController>(opponentId);
 
+        //TEST teeeeeeeeeestin'
+            Debug.Log("Reached sendHandOpponent!");
+            if(opponentHand == null)
+            {
+                Debug.Log("The only constant is suffering. Thus I am null");
+            }
+            else
+            {
+                Debug.Log("Target piece: " + id.ToString());
+                Debug.Log("Identifier: " + opponentId + "!");
+                Debug.Log("Controller ID: " + opponentHand.identifier);
+            }
+
         opponentHand.AddPiece(new DominoID(id.ConvertInt));
         this.DeletePiece(id);
     }
