@@ -10,7 +10,6 @@ public class DealController : Controller
     private BoxCollider2D _spawnZone;
     private ModeController _mode;
     private List<DominoID> _selected = new List<DominoID>();
-    public HandController testOP2;
     private int _currentDepth = 100;
     public bool isDealing => this._spawned.Count > 0;
 
@@ -44,9 +43,6 @@ public class DealController : Controller
                 this.InstantiatePiece(new DominoID(new int[2] {bottomVal, topVal}));
             }
         }
-        this.ActivatePieces(); //to-do Activate only if on self turn
-        //TEST Sending okay?
-            this.SendHandOpponent(new DominoID(48), "opponent2");
     }
 
     //For testing purposes only: Deals all remaining pieces in the table to opponents. And if any remains, fills the 'steal' pile
@@ -163,6 +159,7 @@ public class DealController : Controller
             {
                 this.SendHand(piece);
             }
+            this._selected = new List<DominoID>();
             this._mode.endTurn();
         }
     }
@@ -179,30 +176,32 @@ public class DealController : Controller
             playerHand.AddPiece(new DominoID(id.ConvertInt));
             this.SendNetwork(new DominoID(id.ConvertInt));
             this.DeletePiece(id);
-            // if (this._selected.Count == 0)
-            // {
-            //     this._mode.endTurn();
-            // }
+
+            //If it is in a 2P-game, check if dealing is done
+            if (this._mode.PlayerCount == 2) { this.DealCheck(); }
         }
     }
     
+    //Checks if dealing is done for a 2P-game. If so, sends remaining pieces to pile
+    public void DealCheck()
+    {
+        if (this._spawned.Count == 14)
+        {
+            this.FillPile();
+        }
+    }
+
     //Send a specific piece to an opponent's hand, using said opponent's number [1~3]. In a two-player game, always remains opponent2
     public void SendHandOpponent(DominoID id, string opponentId)
     {
-         //TEST teeeeeeeeeestin'
-            Debug.Log("Reached sendHandOpponent!");
-
         //Get Opponent Hand Controller from active controllers
-        //HandController opponentHand = Controller.GetActiveController<HandController>(opponentId);
-        
+        HandController opponentHand = Controller.GetActiveController<HandController>(opponentId);
 
-        //opponentHand.AddPiece(new DominoID(id.ConvertInt));
-        this.testOP2.AddPiece(new DominoID(id.ConvertInt));
-        //TEST
-            Debug.Log("Added!");
+        opponentHand.AddPiece(new DominoID(id.ConvertInt));
         this.DeletePiece(id);
-        //TEST
-            Debug.Log("Deleted!");
+
+        //If it is in a 2P-game, check if dealing is done
+        if (this._mode.PlayerCount == 2) { this.DealCheck(); }
     }
     //Send a specific piece to the 'steal' pile
     public void SendPile(DominoID id)

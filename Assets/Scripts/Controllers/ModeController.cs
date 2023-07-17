@@ -19,8 +19,6 @@ public class ModeController : Controller
         base.Awake();
     }
     protected void Start(){
-        
-        //to-do Set mode according to player selection
         this.generatePieces();
         if(this.playerId == 1)
         {
@@ -38,18 +36,46 @@ public class ModeController : Controller
 
     public void dealTurn()
     {
-        //to-do Make other controllers react to dealing mode
         this._mode = 0;
+
+        //Get Deal Controller from active controllers. Set generated pieces to be picked
+        DealController dealer = Controller.GetActiveController<DealController>("deal");
+        dealer.ActivatePieces();
     }
 
     public void beginTurn(){
-        //to-do Tell all other controllers to unlock themselves, also, do starting-turn logic such as unlocking certain hand pieces and the pile
+        this._mode = 1; //Set game to standby/play phase
+
+        //Get Pile Controller, and unlock pile
+        PileController pile = Controller.GetActiveController<PileController>("pile");
+        pile.ActivatePile();
+
+        //to-do Unlock table, making table unlock certain hand pieces
+        //TEST Unlock player's hand
+            HandController hand = Controller.GetActiveController<HandController>("hand");
+            hand.ActivateHand();
     }
 
     public void endTurn(){
-        this._mode = -1;
-        //to-do Tell all other controllers to lock themselves
+        this._mode = -1; //Set game to wait phase
+        
+        //Get Deal Controller from active controllers
+        DealController dealer = Controller.GetActiveController<DealController>("deal");
+        //Generated pieces cannot be picked up
+        dealer.LockPieces();
+
+        //Get Pile Controller, and lock pile
+        PileController pile = Controller.GetActiveController<PileController>("pile");
+        pile.LockPile();
+
+        //Lock player's hand
+        HandController hand = Controller.GetActiveController<HandController>("hand");
+        hand.LockHand();
+
+        //to-do Lock table
+
         this.SendStartTurn();
+        //to-do Show banner that other people are playing
     }
 
     //Tell the network adapter to let the next player take their turn

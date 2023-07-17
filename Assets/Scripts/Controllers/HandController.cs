@@ -21,19 +21,10 @@ public class HandController : Controller
     }
 
     public void AddPiece(DominoID id){
-        //TEST AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            Debug.Log("Reached AddPiece. ID: " + this.identifier + "///" + id.ToString(), this);
-        
         HandPiece newPiece = this.InstantiatePiece(id);
-        //TEST AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            Debug.Log("Outside InstantiatePiece()");
         this.handSize += 1; //Hand is bigger
 
-        if (this._handHead == null) 
-        {
-            Debug.Log("Created head!");
-            this._handHead = newPiece;
-        }
+        if (this._handHead == null) { this._handHead = newPiece; }
         else
         {
             if(this._handHead.appendPiece(newPiece))
@@ -51,24 +42,12 @@ public class HandController : Controller
                 this._handHead.updatePos(spawnPos);
             }
         }
-
-        //TEST BBBBBBBBBBB
-            Debug.Log("Head: " + this._handHead.ToString());
-            Debug.Log("Size: " + this.handSize);
     }
 
     public HandPiece InstantiatePiece(DominoID id){
-        //TEST tracerouting
-            Debug.Log("Inside InstantiatePiece!", this);
         HandPiece newPiece;
-        //TEST
-            Debug.Log("Local declaration");
         newPiece = Object.Instantiate(this.basePiece,this._spawnPos,Quaternion.identity);
-        //TEST tracin' v3
-            Debug.Log("Instantiated!");
         newPiece.changeId(id);
-        //TEST moar tracin
-            Debug.Log("Created le piece: " + newPiece.Id.ToString());
         if(newPiece.isVisible != this.show){newPiece.flip();}
         if(newPiece.isAlternate != this.doHorizontalDisp){newPiece.toggleAlternate();}
         newPiece._controller = this;

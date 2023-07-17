@@ -38,7 +38,7 @@ public class PileController : Controller
     //If pile is empty, show skip button
     public void CheckPile()
     {
-        if(this._pile.Count == 0) //No pieces within 'steal' pile
+        if( (this._pile.Count == 0)&&(this._mode.Mode == 1) ) //No pieces within 'steal' pile, also, game is in standby phase
         {
             if(this._button == null)
             {
