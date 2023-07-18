@@ -16,6 +16,7 @@ public class PortLoader : MonoBehaviour
         {
             this._ports.Add(portName);
         }
+        this._dropdown.ClearOptions();
         this._dropdown.AddOptions(this._ports);
     }
 
