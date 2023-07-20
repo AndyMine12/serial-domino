@@ -68,11 +68,9 @@ public class TableController : Controller
                 mode.stuckCondition();
             }
         }
-        if (!isStuck)
+        if ( (!isStuck)&&(playerPlayed) )
         {
             mode.endTurn();
-            //TEST
-                Debug.Log("turn ended!");
         }
 
         return success;
