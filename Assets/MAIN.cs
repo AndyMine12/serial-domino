@@ -21,5 +21,7 @@ public class MAIN : MonoBehaviour
         Application.Quit(); 
     }
 
-
+    private void Start() {
+        Setup.Score = new int[2] {0, 0};
+    }
 }

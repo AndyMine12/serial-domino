@@ -50,4 +50,9 @@ public class PilePiece : DominoPiece
             return this;
         }
     }
+
+    public int getScore()
+    {
+        return (this.TopValue + this.BottomValue);
+    }
 }

@@ -8,7 +8,9 @@ public class HandPiece : DominoPiece
     public float hopDistance = 0.5f;
     protected Vector3 _startPos;
     protected bool _doColor = true;
+    protected bool _isPlaying = false;
     public override bool Colorize => this._doColor;
+    public bool Play => this._isPlaying;
 
     protected override void Start()
     {
@@ -45,11 +47,15 @@ public class HandPiece : DominoPiece
             base.updatePos(newPos);
         }
     }
+    public void resetPos()
+    {
+        this.updatePos(this._startPos, false);
+    }
     
     //Deletes the piece with the given ID from the hand.
     public override DominoPiece deleteById(DominoID id)
     {
-        if (this.Id.ConvertInt != id.ConvertInt) //This is not the piece you are looking for
+        if ( (this.Id.ConvertInt != id.ConvertInt)&&(this.Id.ConvertInt != id.getRotate().ConvertInt) ) //This is not the piece you are looking for
         {
             if (this._nextPiece != null) {this._nextPiece = this._nextPiece.deleteById(id);}
             if (this._nextPiece != null) {this._nextPiece.PrevPiece = this;}
@@ -114,8 +120,9 @@ public class HandPiece : DominoPiece
         }
         else //Needs to be an exact match
         {
-            if(valid.Length == 2)
+            if( (valid.Length == 2)||(valid.Length == 1) )
             {
+                if (valid.Length == 1) { valid = new int[2] {valid[0], valid[0]}; }
                 this.Interact = ((this.BottomValue == valid[0])&&(this.TopValue == valid[1])) || ((this.BottomValue == valid[1])&&(this.TopValue == valid[0]));
             }
             else
@@ -132,7 +139,6 @@ public class HandPiece : DominoPiece
         if (this._nextPiece != null) {this._nextPiece.Lock();}
     }
 
-    //To-do: Hand piece tries to play itself when released
     //Mouse-interaction related
     private void OnMouseEnter() {
         if(this.Interact) //Only interact-able pieces react
@@ -147,9 +153,15 @@ public class HandPiece : DominoPiece
             }
         }
     }
-
+    private void OnMouseUpAsButton() {
+        this._isPlaying = true;
+    }
     private void OnMouseExit() {
-        this.updatePos(this._startPos, false);
+        this._isPlaying = false;
+        if (this.Interact) //If the hand piece cannot interact anymore, it will not return to hand
+        {
+            this.resetPos();
+        }
     }
 
     private void OnMouseDrag() {
@@ -158,6 +170,79 @@ public class HandPiece : DominoPiece
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = this.transform.position.z;
             this.updatePos(mousePos, false);
+        }
+    }
+
+    public bool Contains(DominoID id)
+    {
+        HandPiece next = (HandPiece) this._nextPiece;
+        bool doContain = ( this._id.ConvertInt == id.ConvertInt );
+        if (next != null)
+        {
+            doContain = doContain || next.Contains(id);
+        }
+        return doContain;
+    }
+
+    public int[] highDouble(int prevMax, int isDouble)
+    {
+        int[] newMax = new int[2] {prevMax, isDouble};
+        if (this._nextPiece != null)
+        {
+            HandPiece next = (HandPiece) this._nextPiece;
+            newMax = next.highDouble(prevMax, isDouble);
+        }
+        if (newMax[1] == 1)
+        {
+            if (this.Id.isDouble)
+            {
+                if(this.Id.TopValue > newMax[0])
+                {
+                    newMax[0] = this.Id.TopValue;
+                }
+            }
+        }
+        else //No double found
+        {
+            if (this.Id.isDouble) //Any double truncates no double
+            {
+                newMax[1] = 1;
+                newMax[0] = this.Id.TopValue; 
+            }
+            else
+            {
+                if (this.Id.BottomValue > newMax[0])
+                {
+                    newMax[0] = this.Id.BottomValue;
+                }
+                if (this.Id.TopValue > newMax[0])
+                {
+                    newMax[0] = this.Id.TopValue;
+                }
+            }
+        }
+
+        return newMax;
+    }
+
+    public int getScore()
+    {
+        int score = (this.TopValue + this.BottomValue);
+        if (this._nextPiece != null)
+        {
+            HandPiece next = (HandPiece)this._nextPiece;
+            score += next.getScore();
+        }
+        return score;
+    }
+
+    public void Show()
+    {
+        if(!this.isVisible) {this.flip();}
+        if(this._nextPiece != null)
+        {
+            HandPiece next = (HandPiece)this._nextPiece;
+            next.Show();
         }
     }
 }

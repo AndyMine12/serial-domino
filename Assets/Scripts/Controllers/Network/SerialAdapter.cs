@@ -193,7 +193,8 @@ public class SerialAdapter : NetworkAdapter
         {
             case "deal": //No additional actions are needed for these modes
             case "pile":
-            case "table":
+            case "table0":
+            case "table1":
             case "mode":
             {
                 break;
@@ -213,7 +214,7 @@ public class SerialAdapter : NetworkAdapter
                     }
                 }
                 break;
-            } //to-do Reset table for new round after victory
+            }
             case "disconnect": //Disconnect from game
             {
                 this.disconnect();
@@ -243,17 +244,30 @@ public class SerialAdapter : NetworkAdapter
                 pile.SendHandOpponent(new DominoID(id.ConvertInt), opponentId);
                 break;
             }
-            case "table":
+            case "table0":
             {
-                //to-do Add piece to table
                 HandController opponentHand = Controller.GetActiveController<HandController>(this.getOpponentID(this._senderId));
-                //to-do Delete piece from hand
+                opponentHand.DeletePiece(id);
+                TableController table = Controller.GetActiveController<TableController>("table");
+
+                bool success = table.AddPiece(id, true, false);
+                if (!success) { table.AddPiece(id.getRotate(), true, false); }
+                break;
+            }
+            case "table1":
+            {
+                HandController opponentHand = Controller.GetActiveController<HandController>(this.getOpponentID(this._senderId));
+                opponentHand.DeletePiece(id);
+                TableController table = Controller.GetActiveController<TableController>("table");
+
+                bool success = table.AddPiece(id, false, false);
+                if (!success) { table.AddPiece(id.getRotate(), false, false); }
                 break;
             }
         }
     }
 
-    protected override bool disconnect()
+    public override bool disconnect()
     {
         this.sendMode("disconnect");
         this._doComms = false; //Stop communications
@@ -261,7 +275,7 @@ public class SerialAdapter : NetworkAdapter
         this.serialPort.Close(); //Close port
         StopAllCoroutines(); //Stop coroutines
 
-        //to-do Send to main menu
+        this._mode.endGame();
         return true;
     }
 

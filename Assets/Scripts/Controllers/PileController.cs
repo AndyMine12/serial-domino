@@ -131,6 +131,10 @@ public class PileController : Controller
             playerHand.AddPiece(new DominoID(id.ConvertInt));
             this.SendNetwork(new DominoID (id.ConvertInt));
             this.DeletePiece(id);
+
+            //Refresh hand
+            TableController table = Controller.GetActiveController<TableController>("table");
+            table.ActivateHand();
         }
     }
     //Send a specific piece to an opponent's hand, using said opponent's number [1~3]. In a two-player game, always remains opponent2
@@ -150,5 +154,17 @@ public class PileController : Controller
         NetworkAdapter network = Controller.GetActiveController<NetworkAdapter>("network");
         
         return ( network.setMode(this.identifier) && network.queuePiece(new DominoID(id.ConvertInt)) );
+    }
+
+    //Get score kept in the pile
+    public int getScore()
+    {
+        int score = 0;
+        foreach(PilePiece piece in this._pile)
+        {
+            piece.flip();
+            score += piece.getScore();
+        }
+        return score;
     }
 }

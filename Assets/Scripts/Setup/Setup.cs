@@ -8,6 +8,8 @@ public class Setup : MonoBehaviour
     public static int baudRate = 4800;
     public static int PlayerId = 1;
     public static int PlayerCount = 2;
+    public static int threshold = 100;
+    public static int[] Score = new int[2] {0,0};
 
     public static void SetPlayer(int playerId)
     {
@@ -24,5 +26,9 @@ public class Setup : MonoBehaviour
     public static void SetPort(string portName)
     {
         Setup.portName = portName;
+    }
+    public static void AddScore(int score, int teamId)
+    {
+        Setup.Score[teamId] += score;
     }
 }

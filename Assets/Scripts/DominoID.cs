@@ -135,5 +135,7 @@ public class DominoID
     {
         return new DominoID(new int[2] {this.TopValue, this.BottomValue});
     }
+    //Checks whether or not the given ID corresponds to a double piece
+    public bool isDouble => this.TopValue == this.BottomValue;
 
 }

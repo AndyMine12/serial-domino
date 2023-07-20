@@ -127,7 +127,7 @@ public abstract class DominoPiece : Colorable
         this.changeId(new DominoID(new int[2] {this.TopValue, this.BottomValue}));
     }
     //Modify the piece's ID for a new one
-    public void changeId(DominoID newId){
+    public virtual void changeId(DominoID newId){
         this._id = newId;
         this.StopCoroutine(this.updateSprite());
         this.StartCoroutine(this.updateSprite());

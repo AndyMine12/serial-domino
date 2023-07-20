@@ -53,5 +53,5 @@ public abstract class NetworkAdapter : Controller
         this.isAvailable = false;
     }
     //Handle disconnection from network
-    protected abstract bool disconnect();
+    public abstract bool disconnect();
 }
