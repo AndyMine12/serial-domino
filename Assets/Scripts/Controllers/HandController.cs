@@ -96,6 +96,11 @@ public class HandController : Controller
             Vector3 spawnPos = this._spawnPos - ((this.handSize / 2) * spawnAdjust);
             this._handHead.updatePos(spawnPos);
         }
+        else
+        {
+            ModeController mode = Controller.GetActiveController<ModeController>("mode");
+            mode.winCondition();
+        }
     }
 
     public bool Contains (DominoID id)

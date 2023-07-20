@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScoreLoader : MonoBehaviour
 {
     public int teamId;
+    public string teamName;
     private TMPro.TextMeshProUGUI text;
 
     private void Start() 

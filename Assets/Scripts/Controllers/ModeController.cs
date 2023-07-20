@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ModeController : Controller
 {
     private int _mode = -1;
-    //Modes: -1 -> Wait, 0 -> Dealer, 1 -> Standby, 2 -> End
+    //Modes: -2 -> Wait (Round End), -1 -> Wait, 0 -> Dealer, 1 -> Standby, 2 -> End
     private int _players = Setup.PlayerCount;
     private int playerId = Setup.PlayerId; //Is this Player 1? Player 2? Etc
     public int Mode => this._mode;
@@ -51,6 +51,7 @@ public class ModeController : Controller
         this._mode = 1; //Set game to standby/play phase
         //Check for win condition
         this.winCondition();
+        if (this._mode == -2) { return; } //If already in 'round end' mode, do not go any further
 
         //Get Pile Controller, and unlock pile
         PileController pile = Controller.GetActiveController<PileController>("pile");
@@ -194,6 +195,7 @@ public class ModeController : Controller
     //Resolve a win-condition in a given round
     public void winCondition()
     {
+        if (this._mode == -2) { return; } //If already in 'round end' mode, do not check any further
         HandController hand = Controller.GetActiveController<HandController>("hand");
         HandController op2 = Controller.GetActiveController<HandController>("opponent2");
         HandController op1 = Controller.GetActiveController<HandController>("opponent1");
@@ -233,14 +235,32 @@ public class ModeController : Controller
     //Call the ending of a round
     public void endRound()
     {
+        //Generated pieces cannot be picked up
+        DealController dealer = Controller.GetActiveController<DealController>("deal");
+        dealer.LockPieces();
+
+        //Get Pile Controller, and lock pile
+        PileController pile = Controller.GetActiveController<PileController>("pile");
+        pile.LockPile();
+
+        //Lock player's hand
+        HandController hand = Controller.GetActiveController<HandController>("hand");
+        hand.LockHand();
+
+        //Lock table
+        TableController table = Controller.GetActiveController<TableController>("table");
+        table.LockTable();
+
+        //Show all remaining pieces
         HandController op2 = Controller.GetActiveController<HandController>("opponent2");
         HandController op1 = Controller.GetActiveController<HandController>("opponent1");
         HandController op3 = Controller.GetActiveController<HandController>("opponent3");
         op1.Show(); 
         op2.Show();
         op3.Show();
-        this._mode = -1;
+        this._mode = -2; //Set mode to round end
 
+        //Adjust score
         if(Setup.Score[0] >= Setup.threshold)
         {
             this.victoryPanel.SetActive(true);
